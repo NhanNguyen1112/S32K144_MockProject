@@ -1,0 +1,21 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\main.o"
+".\objects\app_function.o"
+".\objects\nvic.o"
+".\objects\gpio.o"
+".\objects\gpio_isr.o"
+".\objects\port.o"
+".\objects\clock.o"
+".\objects\softtimer.o"
+".\objects\lpit.o"
+".\objects\lpuart.o"
+".\objects\lpspi.o"
+".\objects\string.o"
+".\objects\led_max7219.o"
+".\objects\startup.o"
+".\objects\startup_s32k144.o"
+".\objects\system_s32k144.o"
+--strict --scatter ".\RTE\Device\S32K144HAxxxLLx\S32K144_64_flash.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\MockProject.map" -o .\Objects\MockProject.axf
