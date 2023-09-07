@@ -4,7 +4,6 @@
 ".\objects\nvic.o"
 ".\objects\gpio.o"
 ".\objects\gpio_isr.o"
-".\objects\port.o"
 ".\objects\clock.o"
 ".\objects\softtimer.o"
 ".\objects\lpit.o"

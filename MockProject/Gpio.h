@@ -24,14 +24,10 @@ extern volatile char StateLED;
 #define LEDGREEN 	16u
 
 void Gpio_Init(void);
+
 void Gpio_GetPinValue(const unsigned int port, unsigned char pin, unsigned int *value);
 void Gpio_SetPinValue(const unsigned int port, unsigned char pin, const unsigned int value);
 void Gpio_TogglePin(const unsigned int port, unsigned char pin);
-void Delay(const unsigned int millis, const char Select);
-
-void Program1(void);
-void Program2(void);
-void Assignment3_MAIN(void);
 
 #endif
 

@@ -1,279 +1,234 @@
 Dependencies for Project 'MockProject', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 6190000::V6.19::ARMCLANG
 F (.\main.c)(0x64F7F304)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/main.o -MD)
-I (S32K144.h)(0x64F81AEE)
+I (S32K144.h)(0x64F87013)
 I (Clock.h)(0x64F80B37)
 I (Clock_Register.h)(0x64F6DA1F)
 I (Nvic.h)(0x64F6D5B7)
 I (Nvic_Register.h)(0x64F6D598)
-I (Lpuart.h)(0x64F6E49F)
+I (Lpuart.h)(0x64F97587)
 I (Lpuart_Register.h)(0x64F6D79F)
-I (Lpspi.h)(0x64F7EDF5)
+I (Lpspi.h)(0x64F86734)
 I (Lpspi_Register.h)(0x64F6D7D6)
-I (Lpit.h)(0x64F6FA08)
+I (Lpit.h)(0x64F86DDD)
 I (Lpit_Register.h)(0x64F6D71C)
-I (Gpio.h)(0x64F7EFEA)
+I (Gpio.h)(0x64F867AB)
 I (Gpio_Register.h)(0x64F6D5EC)
-I (Port.h)(0x64F6D91D)
-I (Port_Register.h)(0x64F6D924)
 I (Softtimer.h)(0x64F80241)
 I (Systick_Register.h)(0x64F6D6EA)
 I (APP_FUNCTION.h)(0x64F7F340)
 I (String.h)(0x64F6E45E)
-I (LED_MAX7219.h)(0x64F6F136)
-F (.\S32K144.h)(0x64F81AEE)()
-F (.\APP_FUNCTION.c)(0x64F82F29)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/app_function.o -MD)
+I (LED_MAX7219.h)(0x64F837D3)
+F (.\S32K144.h)(0x64F87013)()
+F (.\APP_FUNCTION.c)(0x64F97BA5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/app_function.o -MD)
 I (APP_FUNCTION.h)(0x64F7F340)
-I (S32K144.h)(0x64F81AEE)
+I (S32K144.h)(0x64F87013)
 I (Clock.h)(0x64F80B37)
 I (Clock_Register.h)(0x64F6DA1F)
 I (Nvic.h)(0x64F6D5B7)
 I (Nvic_Register.h)(0x64F6D598)
-I (Lpuart.h)(0x64F6E49F)
+I (Lpuart.h)(0x64F97587)
 I (Lpuart_Register.h)(0x64F6D79F)
-I (Lpspi.h)(0x64F7EDF5)
+I (Lpspi.h)(0x64F86734)
 I (Lpspi_Register.h)(0x64F6D7D6)
-I (Lpit.h)(0x64F6FA08)
+I (Lpit.h)(0x64F86DDD)
 I (Lpit_Register.h)(0x64F6D71C)
-I (Gpio.h)(0x64F7EFEA)
+I (Gpio.h)(0x64F867AB)
 I (Gpio_Register.h)(0x64F6D5EC)
-I (Port.h)(0x64F6D91D)
-I (Port_Register.h)(0x64F6D924)
 I (Softtimer.h)(0x64F80241)
 I (Systick_Register.h)(0x64F6D6EA)
 I (String.h)(0x64F6E45E)
-I (LED_MAX7219.h)(0x64F6F136)
+I (LED_MAX7219.h)(0x64F837D3)
 F (.\APP_FUNCTION.h)(0x64F7F340)()
 F (.\Nvic.c)(0x64F6D5C4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/nvic.o -MD)
 I (Nvic.h)(0x64F6D5B7)
-I (S32K144.h)(0x64F81AEE)
+I (S32K144.h)(0x64F87013)
 I (Clock.h)(0x64F80B37)
 I (Clock_Register.h)(0x64F6DA1F)
-I (Lpuart.h)(0x64F6E49F)
+I (Lpuart.h)(0x64F97587)
 I (Lpuart_Register.h)(0x64F6D79F)
-I (Lpspi.h)(0x64F7EDF5)
+I (Lpspi.h)(0x64F86734)
 I (Lpspi_Register.h)(0x64F6D7D6)
-I (Lpit.h)(0x64F6FA08)
+I (Lpit.h)(0x64F86DDD)
 I (Lpit_Register.h)(0x64F6D71C)
-I (Gpio.h)(0x64F7EFEA)
+I (Gpio.h)(0x64F867AB)
 I (Gpio_Register.h)(0x64F6D5EC)
-I (Port.h)(0x64F6D91D)
-I (Port_Register.h)(0x64F6D924)
 I (Softtimer.h)(0x64F80241)
 I (Systick_Register.h)(0x64F6D6EA)
 I (APP_FUNCTION.h)(0x64F7F340)
 I (String.h)(0x64F6E45E)
-I (LED_MAX7219.h)(0x64F6F136)
+I (LED_MAX7219.h)(0x64F837D3)
 I (Nvic_Register.h)(0x64F6D598)
 F (.\Nvic.h)(0x64F6D5B7)()
 F (.\Nvic_Register.h)(0x64F6D598)()
-F (.\Gpio.c)(0x64F7FB14)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/gpio.o -MD)
-I (Gpio.h)(0x64F7EFEA)
-I (S32K144.h)(0x64F81AEE)
+F (.\Gpio.c)(0x64F867A3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/gpio.o -MD)
+I (Gpio.h)(0x64F867AB)
+I (S32K144.h)(0x64F87013)
 I (Clock.h)(0x64F80B37)
 I (Clock_Register.h)(0x64F6DA1F)
 I (Nvic.h)(0x64F6D5B7)
 I (Nvic_Register.h)(0x64F6D598)
-I (Lpuart.h)(0x64F6E49F)
+I (Lpuart.h)(0x64F97587)
 I (Lpuart_Register.h)(0x64F6D79F)
-I (Lpspi.h)(0x64F7EDF5)
+I (Lpspi.h)(0x64F86734)
 I (Lpspi_Register.h)(0x64F6D7D6)
-I (Lpit.h)(0x64F6FA08)
+I (Lpit.h)(0x64F86DDD)
 I (Lpit_Register.h)(0x64F6D71C)
-I (Port.h)(0x64F6D91D)
-I (Port_Register.h)(0x64F6D924)
 I (Softtimer.h)(0x64F80241)
 I (Systick_Register.h)(0x64F6D6EA)
 I (APP_FUNCTION.h)(0x64F7F340)
 I (String.h)(0x64F6E45E)
-I (LED_MAX7219.h)(0x64F6F136)
+I (LED_MAX7219.h)(0x64F837D3)
 I (Gpio_Register.h)(0x64F6D5EC)
-F (.\Gpio.h)(0x64F7EFEA)()
+F (.\Gpio.h)(0x64F867AB)()
 F (.\Gpio_Register.h)(0x64F6D5EC)()
 F (.\Gpio_Isr.c)(0x64F6D60F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/gpio_isr.o -MD)
-I (S32K144.h)(0x64F81AEE)
+I (S32K144.h)(0x64F87013)
 I (Clock.h)(0x64F80B37)
 I (Clock_Register.h)(0x64F6DA1F)
 I (Nvic.h)(0x64F6D5B7)
 I (Nvic_Register.h)(0x64F6D598)
-I (Lpuart.h)(0x64F6E49F)
+I (Lpuart.h)(0x64F97587)
 I (Lpuart_Register.h)(0x64F6D79F)
-I (Lpspi.h)(0x64F7EDF5)
+I (Lpspi.h)(0x64F86734)
 I (Lpspi_Register.h)(0x64F6D7D6)
-I (Lpit.h)(0x64F6FA08)
+I (Lpit.h)(0x64F86DDD)
 I (Lpit_Register.h)(0x64F6D71C)
-I (Gpio.h)(0x64F7EFEA)
-I (Gpio_Register.h)(0x64F6D5EC)
-I (Port.h)(0x64F6D91D)
-I (Port_Register.h)(0x64F6D924)
-I (Softtimer.h)(0x64F80241)
-I (Systick_Register.h)(0x64F6D6EA)
-I (APP_FUNCTION.h)(0x64F7F340)
-I (String.h)(0x64F6E45E)
-I (LED_MAX7219.h)(0x64F6F136)
-F (.\Port.c)(0x64F6D8B6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/port.o -MD)
-I (Port.h)(0x64F6D91D)
-I (S32K144.h)(0x64F81AEE)
-I (Clock.h)(0x64F80B37)
-I (Clock_Register.h)(0x64F6DA1F)
-I (Nvic.h)(0x64F6D5B7)
-I (Nvic_Register.h)(0x64F6D598)
-I (Lpuart.h)(0x64F6E49F)
-I (Lpuart_Register.h)(0x64F6D79F)
-I (Lpspi.h)(0x64F7EDF5)
-I (Lpspi_Register.h)(0x64F6D7D6)
-I (Lpit.h)(0x64F6FA08)
-I (Lpit_Register.h)(0x64F6D71C)
-I (Gpio.h)(0x64F7EFEA)
+I (Gpio.h)(0x64F867AB)
 I (Gpio_Register.h)(0x64F6D5EC)
 I (Softtimer.h)(0x64F80241)
 I (Systick_Register.h)(0x64F6D6EA)
 I (APP_FUNCTION.h)(0x64F7F340)
 I (String.h)(0x64F6E45E)
-I (LED_MAX7219.h)(0x64F6F136)
-I (Port_Register.h)(0x64F6D924)
-F (.\Port.h)(0x64F6D91D)()
-F (.\Port_Register.h)(0x64F6D924)()
+I (LED_MAX7219.h)(0x64F837D3)
 F (.\Clock.c)(0x64F80B26)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/clock.o -MD)
 I (Clock.h)(0x64F80B37)
 I (Clock_Register.h)(0x64F6DA1F)
-I (S32K144.h)(0x64F81AEE)
+I (S32K144.h)(0x64F87013)
 I (Nvic.h)(0x64F6D5B7)
 I (Nvic_Register.h)(0x64F6D598)
-I (Lpuart.h)(0x64F6E49F)
+I (Lpuart.h)(0x64F97587)
 I (Lpuart_Register.h)(0x64F6D79F)
-I (Lpspi.h)(0x64F7EDF5)
+I (Lpspi.h)(0x64F86734)
 I (Lpspi_Register.h)(0x64F6D7D6)
-I (Lpit.h)(0x64F6FA08)
+I (Lpit.h)(0x64F86DDD)
 I (Lpit_Register.h)(0x64F6D71C)
-I (Gpio.h)(0x64F7EFEA)
+I (Gpio.h)(0x64F867AB)
 I (Gpio_Register.h)(0x64F6D5EC)
-I (Port.h)(0x64F6D91D)
-I (Port_Register.h)(0x64F6D924)
 I (Softtimer.h)(0x64F80241)
 I (Systick_Register.h)(0x64F6D6EA)
 I (APP_FUNCTION.h)(0x64F7F340)
 I (String.h)(0x64F6E45E)
-I (LED_MAX7219.h)(0x64F6F136)
+I (LED_MAX7219.h)(0x64F837D3)
 F (.\Clock.h)(0x64F80B37)()
 F (.\Clock_Register.h)(0x64F6DA1F)()
 F (.\Softtimer.c)(0x64F815DD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/softtimer.o -MD)
 I (Softtimer.h)(0x64F80241)
-I (S32K144.h)(0x64F81AEE)
+I (S32K144.h)(0x64F87013)
 I (Clock.h)(0x64F80B37)
 I (Clock_Register.h)(0x64F6DA1F)
 I (Nvic.h)(0x64F6D5B7)
 I (Nvic_Register.h)(0x64F6D598)
-I (Lpuart.h)(0x64F6E49F)
+I (Lpuart.h)(0x64F97587)
 I (Lpuart_Register.h)(0x64F6D79F)
-I (Lpspi.h)(0x64F7EDF5)
+I (Lpspi.h)(0x64F86734)
 I (Lpspi_Register.h)(0x64F6D7D6)
-I (Lpit.h)(0x64F6FA08)
+I (Lpit.h)(0x64F86DDD)
 I (Lpit_Register.h)(0x64F6D71C)
-I (Gpio.h)(0x64F7EFEA)
+I (Gpio.h)(0x64F867AB)
 I (Gpio_Register.h)(0x64F6D5EC)
-I (Port.h)(0x64F6D91D)
-I (Port_Register.h)(0x64F6D924)
 I (APP_FUNCTION.h)(0x64F7F340)
 I (String.h)(0x64F6E45E)
-I (LED_MAX7219.h)(0x64F6F136)
+I (LED_MAX7219.h)(0x64F837D3)
 I (Systick_Register.h)(0x64F6D6EA)
 F (.\Softtimer.h)(0x64F80241)()
 F (.\Systick_Register.h)(0x64F6D6EA)()
-F (.\Lpit.c)(0x64F815EB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/lpit.o -MD)
-I (Lpit.h)(0x64F6FA08)
-I (S32K144.h)(0x64F81AEE)
+F (.\Lpit.c)(0x64F86DF1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/lpit.o -MD)
+I (Lpit.h)(0x64F86DDD)
+I (S32K144.h)(0x64F87013)
 I (Clock.h)(0x64F80B37)
 I (Clock_Register.h)(0x64F6DA1F)
 I (Nvic.h)(0x64F6D5B7)
 I (Nvic_Register.h)(0x64F6D598)
-I (Lpuart.h)(0x64F6E49F)
+I (Lpuart.h)(0x64F97587)
 I (Lpuart_Register.h)(0x64F6D79F)
-I (Lpspi.h)(0x64F7EDF5)
+I (Lpspi.h)(0x64F86734)
 I (Lpspi_Register.h)(0x64F6D7D6)
-I (Gpio.h)(0x64F7EFEA)
+I (Gpio.h)(0x64F867AB)
 I (Gpio_Register.h)(0x64F6D5EC)
-I (Port.h)(0x64F6D91D)
-I (Port_Register.h)(0x64F6D924)
 I (Softtimer.h)(0x64F80241)
 I (Systick_Register.h)(0x64F6D6EA)
 I (APP_FUNCTION.h)(0x64F7F340)
 I (String.h)(0x64F6E45E)
-I (LED_MAX7219.h)(0x64F6F136)
+I (LED_MAX7219.h)(0x64F837D3)
 I (Lpit_Register.h)(0x64F6D71C)
-F (.\Lpit.h)(0x64F6FA08)()
+F (.\Lpit.h)(0x64F86DDD)()
 F (.\Lpit_Register.h)(0x64F6D71C)()
 F (.\Lpuart.c)(0x64F82419)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/lpuart.o -MD)
-I (Lpuart.h)(0x64F6E49F)
-I (S32K144.h)(0x64F81AEE)
+I (Lpuart.h)(0x64F97587)
+I (S32K144.h)(0x64F87013)
 I (Clock.h)(0x64F80B37)
 I (Clock_Register.h)(0x64F6DA1F)
 I (Nvic.h)(0x64F6D5B7)
 I (Nvic_Register.h)(0x64F6D598)
-I (Lpspi.h)(0x64F7EDF5)
+I (Lpspi.h)(0x64F86734)
 I (Lpspi_Register.h)(0x64F6D7D6)
-I (Lpit.h)(0x64F6FA08)
+I (Lpit.h)(0x64F86DDD)
 I (Lpit_Register.h)(0x64F6D71C)
-I (Gpio.h)(0x64F7EFEA)
+I (Gpio.h)(0x64F867AB)
 I (Gpio_Register.h)(0x64F6D5EC)
-I (Port.h)(0x64F6D91D)
-I (Port_Register.h)(0x64F6D924)
 I (Softtimer.h)(0x64F80241)
 I (Systick_Register.h)(0x64F6D6EA)
 I (APP_FUNCTION.h)(0x64F7F340)
 I (String.h)(0x64F6E45E)
-I (LED_MAX7219.h)(0x64F6F136)
+I (LED_MAX7219.h)(0x64F837D3)
 I (Lpuart_Register.h)(0x64F6D79F)
-F (.\Lpuart.h)(0x64F6E49F)()
+F (.\Lpuart.h)(0x64F97587)()
 F (.\Lpuart_Register.h)(0x64F6D79F)()
-F (.\Lpspi.c)(0x64F8160F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/lpspi.o -MD)
-I (Lpspi.h)(0x64F7EDF5)
-I (S32K144.h)(0x64F81AEE)
+F (.\Lpspi.c)(0x64F8672A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/lpspi.o -MD)
+I (Lpspi.h)(0x64F86734)
+I (S32K144.h)(0x64F87013)
 I (Clock.h)(0x64F80B37)
 I (Clock_Register.h)(0x64F6DA1F)
 I (Nvic.h)(0x64F6D5B7)
 I (Nvic_Register.h)(0x64F6D598)
-I (Lpuart.h)(0x64F6E49F)
+I (Lpuart.h)(0x64F97587)
 I (Lpuart_Register.h)(0x64F6D79F)
-I (Lpit.h)(0x64F6FA08)
+I (Lpit.h)(0x64F86DDD)
 I (Lpit_Register.h)(0x64F6D71C)
-I (Gpio.h)(0x64F7EFEA)
+I (Gpio.h)(0x64F867AB)
 I (Gpio_Register.h)(0x64F6D5EC)
-I (Port.h)(0x64F6D91D)
-I (Port_Register.h)(0x64F6D924)
 I (Softtimer.h)(0x64F80241)
 I (Systick_Register.h)(0x64F6D6EA)
 I (APP_FUNCTION.h)(0x64F7F340)
 I (String.h)(0x64F6E45E)
-I (LED_MAX7219.h)(0x64F6F136)
+I (LED_MAX7219.h)(0x64F837D3)
 I (Lpspi_Register.h)(0x64F6D7D6)
-F (.\Lpspi.h)(0x64F7EDF5)()
+F (.\Lpspi.h)(0x64F86734)()
 F (.\Lpspi_Register.h)(0x64F6D7D6)()
 F (.\String.c)(0x64F6E46C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/string.o -MD)
 I (String.h)(0x64F6E45E)
 F (.\String.h)(0x64F6E45E)()
-F (.\LED_MAX7219.c)(0x64F6F280)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/led_max7219.o -MD)
-I (LED_MAX7219.h)(0x64F6F136)
-I (S32K144.h)(0x64F81AEE)
+F (.\LED_MAX7219.c)(0x64F83963)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/led_max7219.o -MD)
+I (LED_MAX7219.h)(0x64F837D3)
+I (S32K144.h)(0x64F87013)
 I (Clock.h)(0x64F80B37)
 I (Clock_Register.h)(0x64F6DA1F)
 I (Nvic.h)(0x64F6D5B7)
 I (Nvic_Register.h)(0x64F6D598)
-I (Lpuart.h)(0x64F6E49F)
+I (Lpuart.h)(0x64F97587)
 I (Lpuart_Register.h)(0x64F6D79F)
-I (Lpspi.h)(0x64F7EDF5)
+I (Lpspi.h)(0x64F86734)
 I (Lpspi_Register.h)(0x64F6D7D6)
-I (Lpit.h)(0x64F6FA08)
+I (Lpit.h)(0x64F86DDD)
 I (Lpit_Register.h)(0x64F6D71C)
-I (Gpio.h)(0x64F7EFEA)
+I (Gpio.h)(0x64F867AB)
 I (Gpio_Register.h)(0x64F6D5EC)
-I (Port.h)(0x64F6D91D)
-I (Port_Register.h)(0x64F6D924)
 I (Softtimer.h)(0x64F80241)
 I (Systick_Register.h)(0x64F6D6EA)
 I (APP_FUNCTION.h)(0x64F7F340)
 I (String.h)(0x64F6E45E)
-F (.\LED_MAX7219.h)(0x64F6F136)()
+F (.\LED_MAX7219.h)(0x64F837D3)()
 F (C:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/startup.c)(0x60DEABDE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/Dell/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices-IC:/Users/Dell/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common-D__UVISION_VERSION="538" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/startup.o -MD)
 I (C:\Users\Dell\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.0\platform\devices\startup.h)(0x60C2B802)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63885718)

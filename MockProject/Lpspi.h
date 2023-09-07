@@ -13,10 +13,14 @@
 * PTB17			        | LPSPI1_PCS3 
 */
 
-void SPI_MAIN_TEST(void);
+typedef enum SpiState
+{
+  Spi_OK,
+  Spi_TimeOut
+}SpiState_enum;
 
 void SPI1_Init(void);
-void SPI1_Transmit(unsigned short *Data);
+unsigned char SPI1_Transmit(unsigned short *Data);
 
 #endif /* _SPI_ */
 

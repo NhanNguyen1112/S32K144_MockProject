@@ -61,73 +61,24 @@ void SPI1_Init(void)
 	SPI1->CR |= (1u<<0); 	/* Module Enable */
 }
 
-void SPI1_Transmit(unsigned short *DataSend)
+unsigned char SPI1_Transmit(unsigned short *DataSend)
 {
-	while( (SPI1->SR & (1u)) == 0 ){} /* Wait for Tx FIFO available */                                 
-  SPI1->TDR = *DataSend; /* Transmit data */
-}
+	unsigned int TickTime=0;
+	unsigned char State=Spi_OK;
 
-/*========================================================================================
-																MAIN TEST
-=========================================================================================*/
-void SPI_MAIN_TEST(void)
-{
-	SOSC_Init_8Mhz();
-	SPLL_Init(Div_2,Div_2);
-	Run_Mode_Clock(SPLLDIV2_CLK, RunDiv_2, RunDiv_2, RunDiv_3);
-  //CheckClock();
-
-	LPIT_Init_CH0(60000);
-
-	SPI1_Init();
-
-	static unsigned short Data=0;
-	// /* intensity*/
-	Data = 0x0A01;
-	SPI1_Transmit(&Data);
-	
-	// /* scan limit*/
-	Data = 0x0B07;
-	SPI1_Transmit(&Data);
-
-	// /* Normal Operation */
-	Data = 0x0C01;
-	SPI1_Transmit(&Data);
-
-	// /* Display Test */
-	// //LPSPI1_send_char(0x0F01);
- 
-	// /* Decode mode */
-	Data = 0x09FF;
-	SPI1_Transmit(&Data);
-
-	// /* set 1 for led 0 */
-	Data = 0x0101;
-	SPI1_Transmit(&Data);
-
-	Data = 0x0808;
-	SPI1_Transmit(&Data);
-	// SPI1_Transmit(0x020F);
-	// SPI1_Transmit(0x030F);
-	// SPI1_Transmit(0x040F);
-	// SPI1_Transmit(0x050F);
-	// SPI1_Transmit(0x060F);
-	// SPI1_Transmit(0x070F);
-	// SPI1_Transmit(0x080F);
-
-	while(1)
+	TickTime = Tick_ms;
+	while( (SPI1->SR & (1u)) == 0 ) /* Wait for Tx FIFO available */             
 	{
-		//SPI0_Transmit_16bit(Data);
-		
-		// while( !(SPI0->SR & (1u<<0)) ) /* wait transmit data is requested */
-
-		// SPI0->TDR = Data;
-
-		// SPI0->SR |= (1u<<0); /* Clear TDF flag */
-		
-		// SysTickDelay_ms(1000);
+		if( (unsigned int)(Tick_ms-TickTime)>=5 )
+		{
+			State=Spi_TimeOut;
+			break;
+		}
 	}
+
+  SPI1->TDR = *DataSend; /* Transmit data */
+
+	return State;
 }
-/*=========================================================================================*/
 
 

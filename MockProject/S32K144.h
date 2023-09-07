@@ -11,7 +11,6 @@
 #include "Lpspi.h"
 #include "Lpit.h"
 #include "Gpio.h"
-#include "Port.h"
 #include "Softtimer.h"
 #include "APP_FUNCTION.h"
 #include "String.h"

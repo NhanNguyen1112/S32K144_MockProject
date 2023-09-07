@@ -7,10 +7,8 @@
 
 extern unsigned int Tick_ms;
 
-void MainLPIT_Test(void);
-
-void LPIT_Init_CH0(unsigned int TimerVALUE);
-void LPIT_CH0_Delay_ms(const unsigned int MiliSecond);
+void LPIT_Init(unsigned int TimerVALUE);
+void LPIT_Delay_ms(const unsigned int MiliSecond);
 
 #endif /* _LPIT_ */
 

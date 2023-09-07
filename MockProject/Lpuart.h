@@ -5,7 +5,7 @@
 #include "S32K144.h"
 #include "Lpuart_Register.h"
 
-#define UART_BUFFER_SIZE (20u)
+#define UART_BUFFER_SIZE (100u)
 
 typedef enum UartState
 {
@@ -34,7 +34,7 @@ void Uart_RxMainFunction ( void );
 
 void LPUART1_RxTx_IRQHandler ( void ); 
 
-void UART_MAIN_TEST(void);
+/* void UART_MAIN_TEST(void); */
 
 
 #endif

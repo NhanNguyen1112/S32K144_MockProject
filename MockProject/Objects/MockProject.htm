@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\MockProject.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\MockProject.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Wed Sep  6 14:50:22 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Thu Sep  7 14:28:38 2023
 <BR><P>
-<H3>Maximum Stack Usage =        124 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        132 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-__rt_entry_main &rArr; main &rArr; MAIN_APP &rArr; ACTION &rArr; MAIN_MENU &rArr; SelectBabyMenu &rArr; LED_BLINK_CONFIG &rArr; Gpio_SetPinValue
+__rt_entry_main &rArr; main &rArr; MAIN_APP &rArr; ACTION &rArr; MAIN_MENU &rArr; LED_Blink &rArr; LCD_TimeDisplay &rArr; LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
 <P>
 <H3>
 Mutually Recursive functions
@@ -185,9 +185,9 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[cf]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[d1]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[d0]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[d2]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
 <P><STRONG><a name="[8e]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
@@ -195,7 +195,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<P><STRONG><a name="[d1]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[d3]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[92]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
@@ -205,90 +205,90 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_init
 </UL>
 
-<P><STRONG><a name="[d2]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[d4]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[d3]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[d5]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[d4]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[d6]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[d5]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[d7]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[d6]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000034))
+<P><STRONG><a name="[d8]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000034))
 
-<P><STRONG><a name="[d7]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+<P><STRONG><a name="[d9]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
 
-<P><STRONG><a name="[d8]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[da]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[d9]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+<P><STRONG><a name="[db]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
-<P><STRONG><a name="[da]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[dc]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
-<P><STRONG><a name="[db]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[dd]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[dc]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[de]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[dd]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[df]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[de]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[e0]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[df]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[e1]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[e0]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000006))
+<P><STRONG><a name="[e2]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000006))
 
-<P><STRONG><a name="[e1]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000010))
+<P><STRONG><a name="[e3]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000010))
 
-<P><STRONG><a name="[e2]"></a>__rt_lib_init_relocate_pie_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+<P><STRONG><a name="[e4]"></a>__rt_lib_init_relocate_pie_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
 
-<P><STRONG><a name="[e3]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000035))
+<P><STRONG><a name="[e5]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000035))
 
-<P><STRONG><a name="[e4]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[e6]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[e5]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000027))
+<P><STRONG><a name="[e7]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000027))
 
-<P><STRONG><a name="[e6]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+<P><STRONG><a name="[e8]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
 
 <P><STRONG><a name="[97]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
 </UL>
 
-<P><STRONG><a name="[e7]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
+<P><STRONG><a name="[e9]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
 
-<P><STRONG><a name="[e8]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
+<P><STRONG><a name="[ea]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
 
-<P><STRONG><a name="[e9]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
+<P><STRONG><a name="[eb]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
 
-<P><STRONG><a name="[ea]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
+<P><STRONG><a name="[ec]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
 
-<P><STRONG><a name="[eb]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
+<P><STRONG><a name="[ed]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
 
-<P><STRONG><a name="[ec]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+<P><STRONG><a name="[ee]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
 
-<P><STRONG><a name="[ed]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
+<P><STRONG><a name="[ef]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
 
 <P><STRONG><a name="[8c]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 </UL>
 
-<P><STRONG><a name="[ee]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[f0]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
-<P><STRONG><a name="[ef]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry7.o(.ARM.Collect$$rtentry$$00000007))
+<P><STRONG><a name="[f1]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry7.o(.ARM.Collect$$rtentry$$00000007))
 
 <P><STRONG><a name="[91]"></a>__rt_entry_li</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000A))
 <BR><BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
 </UL>
 
-<P><STRONG><a name="[f0]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
+<P><STRONG><a name="[f2]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[93]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 124 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; MAIN_APP &rArr; ACTION &rArr; MAIN_MENU &rArr; SelectBabyMenu &rArr; LED_BLINK_CONFIG &rArr; Gpio_SetPinValue
+<BR><BR>[Stack]<UL><LI>Max Depth = 132 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; MAIN_APP &rArr; ACTION &rArr; MAIN_MENU &rArr; LED_Blink &rArr; LCD_TimeDisplay &rArr; LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[f1]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[f3]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[9a]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -298,7 +298,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
 </UL>
 
-<P><STRONG><a name="[f2]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+<P><STRONG><a name="[f4]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
 <P><STRONG><a name="[98]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
@@ -743,11 +743,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[f3]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[f5]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[f4]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[f6]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[f5]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[f7]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, indicate_semi.o(.text), UNUSED)
 
 <P><STRONG><a name="[99]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
@@ -759,224 +759,225 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
 </UL>
 
-<P><STRONG><a name="[ca]"></a>EnableClockPortB</STRONG> (Thumb, 56 bytes, Stack size 4 bytes, clock.o(.text.EnableClockPortB))
+<P><STRONG><a name="[cc]"></a>EnableClockPortB</STRONG> (Thumb, 56 bytes, Stack size 4 bytes, clock.o(.text.EnableClockPortB))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = EnableClockPortB
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_GPIO_Config
+<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_GPIO_Config
 </UL>
 
-<P><STRONG><a name="[a8]"></a>EnableClockPortC</STRONG> (Thumb, 56 bytes, Stack size 4 bytes, clock.o(.text.EnableClockPortC))
+<P><STRONG><a name="[a9]"></a>EnableClockPortC</STRONG> (Thumb, 56 bytes, Stack size 4 bytes, clock.o(.text.EnableClockPortC))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = EnableClockPortC
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_GPIO_Config
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
+<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_GPIO_Config
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
 </UL>
 
-<P><STRONG><a name="[a9]"></a>EnableClockPortD</STRONG> (Thumb, 56 bytes, Stack size 4 bytes, clock.o(.text.EnableClockPortD))
+<P><STRONG><a name="[aa]"></a>EnableClockPortD</STRONG> (Thumb, 56 bytes, Stack size 4 bytes, clock.o(.text.EnableClockPortD))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = EnableClockPortD
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
+<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
 </UL>
 
-<P><STRONG><a name="[c1]"></a>Gpio_GetPinValue</STRONG> (Thumb, 180 bytes, Stack size 12 bytes, gpio.o(.text.Gpio_GetPinValue))
+<P><STRONG><a name="[c4]"></a>Gpio_GetPinValue</STRONG> (Thumb, 180 bytes, Stack size 12 bytes, gpio.o(.text.Gpio_GetPinValue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = Gpio_GetPinValue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
-<P><STRONG><a name="[a7]"></a>Gpio_Init</STRONG> (Thumb, 262 bytes, Stack size 16 bytes, gpio.o(.text.Gpio_Init))
+<P><STRONG><a name="[a8]"></a>Gpio_Init</STRONG> (Thumb, 262 bytes, Stack size 16 bytes, gpio.o(.text.Gpio_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = Gpio_Init &rArr; EnableClockPortD
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableClockPortD
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableClockPortC
+<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableClockPortD
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableClockPortC
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_BUTTON_INIT
 </UL>
 
-<P><STRONG><a name="[af]"></a>Gpio_SetPinValue</STRONG> (Thumb, 358 bytes, Stack size 12 bytes, gpio.o(.text.Gpio_SetPinValue))
+<P><STRONG><a name="[b0]"></a>Gpio_SetPinValue</STRONG> (Thumb, 358 bytes, Stack size 12 bytes, gpio.o(.text.Gpio_SetPinValue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = Gpio_SetPinValue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STOP_LED_Alarm
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_BLINK_CONFIG
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STOP_LED_Alarm
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_BLINK_CONFIG
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Alarm
 </UL>
 
-<P><STRONG><a name="[aa]"></a>LCD_Print</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, led_max7219.o(.text.LCD_Print))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = LCD_Print &rArr; SPI1_Transmit
+<P><STRONG><a name="[ab]"></a>LCD_Print</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, led_max7219.o(.text.LCD_Print))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = LCD_Print &rArr; SPI1_Transmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Transmit
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Transmit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TwoNumber
+<BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TwoNumber
 </UL>
 
-<P><STRONG><a name="[ac]"></a>LCD_TimeDisplay</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, led_max7219.o(.text.LCD_TimeDisplay))
-<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = LCD_TimeDisplay &rArr; LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
+<P><STRONG><a name="[ad]"></a>LCD_TimeDisplay</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, led_max7219.o(.text.LCD_TimeDisplay))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = LCD_TimeDisplay &rArr; LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TwoNumber
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TurnOff
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TwoNumber
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TurnOff
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Blink
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectMainMenu
+<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Blink
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectMainMenu
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_MENU
 </UL>
 
-<P><STRONG><a name="[ad]"></a>LCD_TurnOff</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, led_max7219.o(.text.LCD_TurnOff))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = LCD_TurnOff &rArr; SPI1_Transmit
+<P><STRONG><a name="[ae]"></a>LCD_TurnOff</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, led_max7219.o(.text.LCD_TurnOff))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = LCD_TurnOff &rArr; SPI1_Transmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Transmit
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Transmit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TimeDisplay
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Blink
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TimeDisplay
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Blink
 </UL>
 
-<P><STRONG><a name="[ae]"></a>LCD_TwoNumber</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, led_max7219.o(.text.LCD_TwoNumber))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
+<P><STRONG><a name="[af]"></a>LCD_TwoNumber</STRONG> (Thumb, 134 bytes, Stack size 16 bytes, led_max7219.o(.text.LCD_TwoNumber))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Print
+<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Print
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TimeDisplay
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TimeDisplay
 </UL>
 
 <P><STRONG><a name="[3a]"></a>LPIT0_Ch0_IRQHandler</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, lpit.o(.text.LPIT0_Ch0_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_s32k144.o(RESET)
 </UL>
-<P><STRONG><a name="[b1]"></a>LPIT_CH0_Delay_ms</STRONG> (Thumb, 42 bytes, Stack size 4 bytes, lpit.o(.text.LPIT_CH0_Delay_ms))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = LPIT_CH0_Delay_ms
-</UL>
-<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_BLINK_CONFIG
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
-</UL>
-
-<P><STRONG><a name="[b4]"></a>LPIT_CLK_ENABLE</STRONG> (Thumb, 196 bytes, Stack size 4 bytes, clock.o(.text.LPIT_CLK_ENABLE))
+<P><STRONG><a name="[b5]"></a>LPIT_CLK_ENABLE</STRONG> (Thumb, 196 bytes, Stack size 4 bytes, clock.o(.text.LPIT_CLK_ENABLE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = LPIT_CLK_ENABLE
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_Init_CH0
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_Init
 </UL>
 
-<P><STRONG><a name="[b3]"></a>LPIT_Init_CH0</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, lpit.o(.text.LPIT_Init_CH0))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = LPIT_Init_CH0 &rArr; LPIT_CLK_ENABLE
+<P><STRONG><a name="[b2]"></a>LPIT_Delay_ms</STRONG> (Thumb, 42 bytes, Stack size 4 bytes, lpit.o(.text.LPIT_Delay_ms))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = LPIT_Delay_ms
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_CLK_ENABLE
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_ClearPendingFlag
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableInterrupt
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_BLINK_CONFIG
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+
+<P><STRONG><a name="[b4]"></a>LPIT_Init</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, lpit.o(.text.LPIT_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = LPIT_Init &rArr; LPIT_CLK_ENABLE
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_CLK_ENABLE
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_ClearPendingFlag
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableInterrupt
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
 <P><STRONG><a name="[2b]"></a>LPUART1_RxTx_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, lpuart.o(.text.LPUART1_RxTx_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LPUART1_RxTx_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_RxMainFunction
+<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_RxMainFunction
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_s32k144.o(RESET)
 </UL>
-<P><STRONG><a name="[b9]"></a>MAIN_APP</STRONG> (Thumb, 148 bytes, Stack size 8 bytes, app_function.o(.text.MAIN_APP))
-<BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = MAIN_APP &rArr; ACTION &rArr; MAIN_MENU &rArr; SelectBabyMenu &rArr; LED_BLINK_CONFIG &rArr; Gpio_SetPinValue
+<P><STRONG><a name="[ba]"></a>MAIN_APP</STRONG> (Thumb, 182 bytes, Stack size 8 bytes, app_function.o(.text.MAIN_APP))
+<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = MAIN_APP &rArr; ACTION &rArr; MAIN_MENU &rArr; LED_Blink &rArr; LCD_TimeDisplay &rArr; LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_CH0_Delay_ms
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_TxMainFunction
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Softtimer_MainFunction
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_GetReceiveData
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_GetReceiveState
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_GetPinValue
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAX7219_Init
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_Init_CH0
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Init
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Softtimer_Init
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Run_Mode_Clock
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPLL_Init
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SOSC_Init_8Mhz
+<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Softtimer_MainFunction
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_GetReceiveData
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_GetReceiveState
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_GetPinValue
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_Delay_ms
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_TxMainFunction
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Transmit
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAX7219_Init
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_Init
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Init
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Softtimer_Init
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Run_Mode_Clock
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPLL_Init
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SOSC_Init_8Mhz
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACTION
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c0]"></a>MAX7219_Init</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, led_max7219.o(.text.MAX7219_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = MAX7219_Init &rArr; SPI1_Transmit
+<P><STRONG><a name="[c1]"></a>MAX7219_Init</STRONG> (Thumb, 134 bytes, Stack size 16 bytes, led_max7219.o(.text.MAX7219_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = MAX7219_Init &rArr; SPI1_Transmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Transmit
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Transmit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
-<P><STRONG><a name="[b6]"></a>NVIC_ClearPendingFlag</STRONG> (Thumb, 50 bytes, Stack size 4 bytes, nvic.o(.text.NVIC_ClearPendingFlag))
+<P><STRONG><a name="[b7]"></a>NVIC_ClearPendingFlag</STRONG> (Thumb, 50 bytes, Stack size 4 bytes, nvic.o(.text.NVIC_ClearPendingFlag))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = NVIC_ClearPendingFlag
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_Init_CH0
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_Init
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
 </UL>
 
-<P><STRONG><a name="[b7]"></a>NVIC_EnableInterrupt</STRONG> (Thumb, 50 bytes, Stack size 4 bytes, nvic.o(.text.NVIC_EnableInterrupt))
+<P><STRONG><a name="[b8]"></a>NVIC_EnableInterrupt</STRONG> (Thumb, 50 bytes, Stack size 4 bytes, nvic.o(.text.NVIC_EnableInterrupt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = NVIC_EnableInterrupt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_Init_CH0
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_Init
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
 </UL>
 
-<P><STRONG><a name="[b5]"></a>NVIC_SetPriority</STRONG> (Thumb, 54 bytes, Stack size 4 bytes, nvic.o(.text.NVIC_SetPriority))
+<P><STRONG><a name="[b6]"></a>NVIC_SetPriority</STRONG> (Thumb, 54 bytes, Stack size 4 bytes, nvic.o(.text.NVIC_SetPriority))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_Init_CH0
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_Init
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
 </UL>
 
 <P><STRONG><a name="[47]"></a>PORTC_IRQHandler</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, gpio_isr.o(.text.PORTC_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_s32k144.o(RESET)
 </UL>
-<P><STRONG><a name="[bc]"></a>Run_Mode_Clock</STRONG> (Thumb, 170 bytes, Stack size 8 bytes, clock.o(.text.Run_Mode_Clock))
+<P><STRONG><a name="[bd]"></a>Run_Mode_Clock</STRONG> (Thumb, 170 bytes, Stack size 8 bytes, clock.o(.text.Run_Mode_Clock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Run_Mode_Clock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
-<P><STRONG><a name="[ba]"></a>SOSC_Init_8Mhz</STRONG> (Thumb, 120 bytes, Stack size 12 bytes, clock.o(.text.SOSC_Init_8Mhz))
+<P><STRONG><a name="[bb]"></a>SOSC_Init_8Mhz</STRONG> (Thumb, 120 bytes, Stack size 12 bytes, clock.o(.text.SOSC_Init_8Mhz))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SOSC_Init_8Mhz
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
-<P><STRONG><a name="[cb]"></a>SPI1_CLK_ENABLE</STRONG> (Thumb, 196 bytes, Stack size 4 bytes, clock.o(.text.SPI1_CLK_ENABLE))
+<P><STRONG><a name="[cd]"></a>SPI1_CLK_ENABLE</STRONG> (Thumb, 196 bytes, Stack size 4 bytes, clock.o(.text.SPI1_CLK_ENABLE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SPI1_CLK_ENABLE
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Init
+<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Init
 </UL>
 
-<P><STRONG><a name="[bf]"></a>SPI1_Init</STRONG> (Thumb, 212 bytes, Stack size 16 bytes, lpspi.o(.text.SPI1_Init))
+<P><STRONG><a name="[c0]"></a>SPI1_Init</STRONG> (Thumb, 212 bytes, Stack size 16 bytes, lpspi.o(.text.SPI1_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = SPI1_Init &rArr; SPI1_GPIO_Config &rArr; EnableClockPortB
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_GPIO_Config
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_CLK_ENABLE
+<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_GPIO_Config
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_CLK_ENABLE
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
-</UL>
-
-<P><STRONG><a name="[ab]"></a>SPI1_Transmit</STRONG> (Thumb, 42 bytes, Stack size 4 bytes, lpspi.o(.text.SPI1_Transmit))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SPI1_Transmit
-</UL>
-<BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Print
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TurnOff
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAX7219_Init
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
-<P><STRONG><a name="[bb]"></a>SPLL_Init</STRONG> (Thumb, 210 bytes, Stack size 16 bytes, clock.o(.text.SPLL_Init))
+<P><STRONG><a name="[ac]"></a>SPI1_Transmit</STRONG> (Thumb, 94 bytes, Stack size 12 bytes, lpspi.o(.text.SPI1_Transmit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SPI1_Transmit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Print
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TurnOff
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAX7219_Init
+</UL>
+
+<P><STRONG><a name="[bc]"></a>SPLL_Init</STRONG> (Thumb, 210 bytes, Stack size 16 bytes, clock.o(.text.SPLL_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SPLL_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
-<P><STRONG><a name="[bd]"></a>Softtimer_Init</STRONG> (Thumb, 152 bytes, Stack size 4 bytes, softtimer.o(.text.Softtimer_Init))
+<P><STRONG><a name="[be]"></a>Softtimer_Init</STRONG> (Thumb, 152 bytes, Stack size 4 bytes, softtimer.o(.text.Softtimer_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = Softtimer_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
-<P><STRONG><a name="[c4]"></a>Softtimer_MainFunction</STRONG> (Thumb, 202 bytes, Stack size 16 bytes, softtimer.o(.text.Softtimer_MainFunction))
+<P><STRONG><a name="[c7]"></a>Softtimer_MainFunction</STRONG> (Thumb, 202 bytes, Stack size 16 bytes, softtimer.o(.text.Softtimer_MainFunction))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Softtimer_MainFunction
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
 <P><STRONG><a name="[a3]"></a>Softtimer_StartTimer</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, softtimer.o(.text.Softtimer_StartTimer))
@@ -987,10 +988,10 @@ Global Symbols
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckTIMER_Alarm
 </UL>
 
-<P><STRONG><a name="[c7]"></a>Softtimer_StopTimer</STRONG> (Thumb, 30 bytes, Stack size 4 bytes, softtimer.o(.text.Softtimer_StopTimer))
+<P><STRONG><a name="[c9]"></a>Softtimer_StopTimer</STRONG> (Thumb, 30 bytes, Stack size 4 bytes, softtimer.o(.text.Softtimer_StopTimer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = Softtimer_StopTimer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STOP_LED_Alarm
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STOP_LED_Alarm
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_MENU
 </UL>
 
@@ -1000,40 +1001,46 @@ Global Symbols
 <P><STRONG><a name="[86]"></a>SystemInit</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, system_s32k144.o(.text.SystemInit))
 <BR>[Address Reference Count : 1]<UL><LI> startup_s32k144.o(.text)
 </UL>
-<P><STRONG><a name="[ce]"></a>UART1_CLK_ENABLE</STRONG> (Thumb, 196 bytes, Stack size 4 bytes, clock.o(.text.UART1_CLK_ENABLE))
+<P><STRONG><a name="[d0]"></a>UART1_CLK_ENABLE</STRONG> (Thumb, 196 bytes, Stack size 4 bytes, clock.o(.text.UART1_CLK_ENABLE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = UART1_CLK_ENABLE
 </UL>
-<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
 </UL>
 
-<P><STRONG><a name="[c3]"></a>Uart_GetReceiveData</STRONG> (Thumb, 184 bytes, Stack size 4 bytes, lpuart.o(.text.Uart_GetReceiveData))
+<P><STRONG><a name="[c6]"></a>Uart_GetReceiveData</STRONG> (Thumb, 184 bytes, Stack size 4 bytes, lpuart.o(.text.Uart_GetReceiveData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = Uart_GetReceiveData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
-<P><STRONG><a name="[c2]"></a>Uart_GetReceiveState</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lpuart.o(.text.Uart_GetReceiveState))
-<BR><BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<P><STRONG><a name="[c5]"></a>Uart_GetReceiveState</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lpuart.o(.text.Uart_GetReceiveState))
+<BR><BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
-<P><STRONG><a name="[be]"></a>Uart_Init</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, lpuart.o(.text.Uart_Init))
+<P><STRONG><a name="[bf]"></a>Uart_Init</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, lpuart.o(.text.Uart_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = Uart_Init &rArr; UART1_GPIO_Config &rArr; EnableClockPortC
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_GPIO_Config
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_CLK_ENABLE
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_ClearPendingFlag
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableInterrupt
+<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_GPIO_Config
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_CLK_ENABLE
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_ClearPendingFlag
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableInterrupt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
-<P><STRONG><a name="[b8]"></a>Uart_RxMainFunction</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, lpuart.o(.text.Uart_RxMainFunction))
+<P><STRONG><a name="[b9]"></a>Uart_RxMainFunction</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, lpuart.o(.text.Uart_RxMainFunction))
 <BR><BR>[Called By]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART1_RxTx_IRQHandler
 </UL>
 
-<P><STRONG><a name="[c5]"></a>Uart_TxMainFunction</STRONG> (Thumb, 130 bytes, Stack size 0 bytes, lpuart.o(.text.Uart_TxMainFunction))
-<BR><BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<P><STRONG><a name="[c2]"></a>Uart_Transmit</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, lpuart.o(.text.Uart_Transmit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Uart_Transmit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+</UL>
+
+<P><STRONG><a name="[c3]"></a>Uart_TxMainFunction</STRONG> (Thumb, 130 bytes, Stack size 0 bytes, lpuart.o(.text.Uart_TxMainFunction))
+<BR><BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
 <P><STRONG><a name="[87]"></a>init_data_bss</STRONG> (Thumb, 160 bytes, Stack size 20 bytes, startup.o(.text.init_data_bss))
@@ -1042,9 +1049,9 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_s32k144.o(.text)
 </UL>
 <P><STRONG><a name="[94]"></a>main</STRONG> (Thumb, 12 bytes, Stack size 16 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = main &rArr; MAIN_APP &rArr; ACTION &rArr; MAIN_MENU &rArr; SelectBabyMenu &rArr; LED_BLINK_CONFIG &rArr; Gpio_SetPinValue
+<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = main &rArr; MAIN_APP &rArr; ACTION &rArr; MAIN_MENU &rArr; LED_Blink &rArr; LCD_TimeDisplay &rArr; LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
@@ -1053,9 +1060,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_fp_1
 </UL>
 
-<P><STRONG><a name="[f6]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[f8]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 
-<P><STRONG><a name="[f7]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[f9]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 <P>
 <H3>
 Local Symbols
@@ -1066,23 +1073,23 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BufferClear
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_BUTTON_INIT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
 <P><STRONG><a name="[9b]"></a>ACTION</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, app_function.o(.text.ACTION))
-<BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = ACTION &rArr; MAIN_MENU &rArr; SelectBabyMenu &rArr; LED_BLINK_CONFIG &rArr; Gpio_SetPinValue
+<BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = ACTION &rArr; MAIN_MENU &rArr; LED_Blink &rArr; LCD_TimeDisplay &rArr; LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_MENU
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckTIMER_Alarm
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Data_UART
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_APP
 </UL>
 
 <P><STRONG><a name="[a0]"></a>LED_BUTTON_INIT</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, app_function.o(.text.LED_BUTTON_INIT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = LED_BUTTON_INIT &rArr; Gpio_Init &rArr; EnableClockPortD
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
+<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
 </UL>
@@ -1106,22 +1113,23 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[9e]"></a>MAIN_MENU</STRONG> (Thumb, 388 bytes, Stack size 24 bytes, app_function.o(.text.MAIN_MENU))
-<BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = MAIN_MENU &rArr; SelectBabyMenu &rArr; LED_BLINK_CONFIG &rArr; Gpio_SetPinValue
+<BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = MAIN_MENU &rArr; LED_Blink &rArr; LCD_TimeDisplay &rArr; LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TimeDisplay
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Softtimer_StopTimer
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TimeDisplay
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Softtimer_StopTimer
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Softtimer_StartTimer
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectBabyMenu
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Blink
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectMainMenu
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectBabyMenu
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Blink
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectMainMenu
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACTION
 </UL>
 
-<P><STRONG><a name="[a4]"></a>Decode_Data</STRONG> (Thumb, 436 bytes, Stack size 40 bytes, app_function.o(.text.Decode_Data))
+<P><STRONG><a name="[a4]"></a>Decode_Data</STRONG> (Thumb, 428 bytes, Stack size 40 bytes, app_function.o(.text.Decode_Data))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = Decode_Data &rArr; Link_Number
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckRuleTime
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckRuleTime
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckRuleNumber
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Link_Number
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_Data_UART
@@ -1138,35 +1146,35 @@ Local Symbols
 <P><STRONG><a name="[8a]"></a>LED_Alarm</STRONG> (Thumb, 192 bytes, Stack size 40 bytes, app_function.o(.text.LED_Alarm))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = LED_Alarm &rArr; Gpio_SetPinValue
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetPinValue
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetPinValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckTIMER_Alarm
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app_function.o(.text.CheckTIMER_Alarm)
 </UL>
-<P><STRONG><a name="[c6]"></a>SelectMainMenu</STRONG> (Thumb, 322 bytes, Stack size 8 bytes, app_function.o(.text.SelectMainMenu))
-<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = SelectMainMenu &rArr; LCD_TimeDisplay &rArr; LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
+<P><STRONG><a name="[c8]"></a>SelectMainMenu</STRONG> (Thumb, 322 bytes, Stack size 8 bytes, app_function.o(.text.SelectMainMenu))
+<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = SelectMainMenu &rArr; LCD_TimeDisplay &rArr; LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TimeDisplay
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STOP_LED_Alarm
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_BLINK_CONFIG
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_MENU
-</UL>
-
-<P><STRONG><a name="[b2]"></a>LED_Blink</STRONG> (Thumb, 274 bytes, Stack size 16 bytes, app_function.o(.text.LED_Blink))
-<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = LED_Blink &rArr; LCD_TimeDisplay &rArr; LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
-</UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TurnOff
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TimeDisplay
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TimeDisplay
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STOP_LED_Alarm
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_BLINK_CONFIG
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_MENU
 </UL>
 
-<P><STRONG><a name="[c8]"></a>SelectBabyMenu</STRONG> (Thumb, 448 bytes, Stack size 24 bytes, app_function.o(.text.SelectBabyMenu))
+<P><STRONG><a name="[b3]"></a>LED_Blink</STRONG> (Thumb, 274 bytes, Stack size 16 bytes, app_function.o(.text.LED_Blink))
+<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = LED_Blink &rArr; LCD_TimeDisplay &rArr; LCD_TwoNumber &rArr; LCD_Print &rArr; SPI1_Transmit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TurnOff
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_TimeDisplay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_MENU
+</UL>
+
+<P><STRONG><a name="[ca]"></a>SelectBabyMenu</STRONG> (Thumb, 448 bytes, Stack size 24 bytes, app_function.o(.text.SelectBabyMenu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = SelectBabyMenu &rArr; LED_BLINK_CONFIG &rArr; Gpio_SetPinValue
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_BLINK_CONFIG
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_BLINK_CONFIG
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MAIN_MENU
 </UL>
@@ -1181,45 +1189,51 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Decode_Data
 </UL>
 
-<P><STRONG><a name="[a6]"></a>CheckRuleTime</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, app_function.o(.text.CheckRuleTime))
+<P><STRONG><a name="[a6]"></a>CheckRuleNumber</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, app_function.o(.text.CheckRuleNumber))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CheckRuleNumber
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Decode_Data
+</UL>
+
+<P><STRONG><a name="[a7]"></a>CheckRuleTime</STRONG> (Thumb, 132 bytes, Stack size 8 bytes, app_function.o(.text.CheckRuleTime))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CheckRuleTime
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Decode_Data
 </UL>
 
-<P><STRONG><a name="[b0]"></a>LED_BLINK_CONFIG</STRONG> (Thumb, 110 bytes, Stack size 32 bytes, app_function.o(.text.LED_BLINK_CONFIG))
+<P><STRONG><a name="[b1]"></a>LED_BLINK_CONFIG</STRONG> (Thumb, 110 bytes, Stack size 32 bytes, app_function.o(.text.LED_BLINK_CONFIG))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = LED_BLINK_CONFIG &rArr; Gpio_SetPinValue
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetPinValue
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_CH0_Delay_ms
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetPinValue
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPIT_Delay_ms
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectBabyMenu
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectMainMenu
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectBabyMenu
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectMainMenu
 </UL>
 
-<P><STRONG><a name="[cc]"></a>STOP_LED_Alarm</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, app_function.o(.text.STOP_LED_Alarm))
+<P><STRONG><a name="[ce]"></a>STOP_LED_Alarm</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, app_function.o(.text.STOP_LED_Alarm))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = STOP_LED_Alarm &rArr; Gpio_SetPinValue
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetPinValue
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Softtimer_StopTimer
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetPinValue
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Softtimer_StopTimer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectMainMenu
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectMainMenu
 </UL>
 
-<P><STRONG><a name="[cd]"></a>UART1_GPIO_Config</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, lpuart.o(.text.UART1_GPIO_Config))
+<P><STRONG><a name="[cf]"></a>UART1_GPIO_Config</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, lpuart.o(.text.UART1_GPIO_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = UART1_GPIO_Config &rArr; EnableClockPortC
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableClockPortC
+<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableClockPortC
 </UL>
-<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
 </UL>
 
-<P><STRONG><a name="[c9]"></a>SPI1_GPIO_Config</STRONG> (Thumb, 106 bytes, Stack size 8 bytes, lpspi.o(.text.SPI1_GPIO_Config))
+<P><STRONG><a name="[cb]"></a>SPI1_GPIO_Config</STRONG> (Thumb, 106 bytes, Stack size 8 bytes, lpspi.o(.text.SPI1_GPIO_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SPI1_GPIO_Config &rArr; EnableClockPortB
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableClockPortB
+<BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableClockPortB
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Init
+<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Init
 </UL>
 <P>
 <H3>

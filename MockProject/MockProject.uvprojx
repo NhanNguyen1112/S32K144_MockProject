@@ -457,26 +457,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>PORT</GroupName>
-          <Files>
-            <File>
-              <FileName>Port.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Port.c</FilePath>
-            </File>
-            <File>
-              <FileName>Port.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Port.h</FilePath>
-            </File>
-            <File>
-              <FileName>Port_Register.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Port_Register.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>CLOCK</GroupName>
           <Files>
             <File>

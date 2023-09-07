@@ -8,7 +8,7 @@
 #define Softtimer_START (0u)
 #define Softtimer_Alarm (1u)
 #define ButtonValue (0u)
-#define LengthData (20u)
+#define LengthData (100u)
 /*=================================================================*/
 
 /*===================================================================
@@ -68,17 +68,21 @@ static volatile unsigned int Length_Data_Read;
 static unsigned char SelectMenu;
 static unsigned char SelectPosition;
 
+static unsigned char LED_ERR[10]={ '[','E','R','R','O','R','L','E','D',']' };
+
 /*=================================================================*/
 
 /*===================================================================
 											LOCAL FUNCTIONS
 ===================================================================*/
 
+/* Init Button & Led */
 static void LED_BUTTON_INIT(void)
 {
   Gpio_Init();
 }
 
+/* App Init */
 static void APP_Init(void)
 {
   LED_BUTTON_INIT();
@@ -101,21 +105,23 @@ static void APP_Init(void)
   FlagLedAlarm=0;
 }
 
+/* LED bao nhan nut config */
 static void LED_BLINK_CONFIG(void)
 {
   Gpio_SetPinValue(PortD,LEDRED,LOW);
-  LPIT_CH0_Delay_ms(200);
+  LPIT_Delay_ms(200);
   Gpio_SetPinValue(PortD,LEDRED,HIGH);
-  LPIT_CH0_Delay_ms(200);
+  LPIT_Delay_ms(200);
   Gpio_SetPinValue(PortD,LEDRED,LOW);
-  LPIT_CH0_Delay_ms(200);
+  LPIT_Delay_ms(200);
   Gpio_SetPinValue(PortD,LEDRED,HIGH);
-  LPIT_CH0_Delay_ms(200); 
+  LPIT_Delay_ms(200); 
   Gpio_SetPinValue(PortD,LEDRED,LOW);
-  LPIT_CH0_Delay_ms(1000);
+  LPIT_Delay_ms(1000);
   Gpio_SetPinValue(PortD,LEDRED,HIGH);  
 }
 
+/* Hien thi dong ho len LCD */
 static void Watch_Display(void)
 {
   if(Watch.Second >= 59) 
@@ -143,26 +149,61 @@ static void Watch_Display(void)
   
 }
 
+/* Noi 2 so thanh 1 so */
 static void Link_Number(unsigned char *Des, unsigned char *a, unsigned char *b)
 {
 	*Des = ( ((*a) * 10) + (*b) );
 }
 
+/*Kiem tra gio, phut, giay 
+  AM: gio>=1 & gio<=12
+  PM: gio>=0 & gio<=23
+      phut>=0 & phut<=59
+      giay>=0 & giay<=59 */
 static unsigned char CheckRuleTime(DayTime_typedef *Time)
 {
   unsigned char Result=FALSE;
 
   if(Time_Mode == AM) /* 1->12->1 */
   {
-    if( (Time->Hour>=1) && (Time->Hour<=12) ) Result=TRUE;
+    if( (Time->Hour>=1) && (Time->Hour<=12) ) /* AM thi khong co 0h */
+    {
+      if( (Time->Minute<=59) )
+      {
+        if( (Time->Second<=59) ) Result=TRUE;
+      }
+    }
   }
   else /* PM: 1->23->0->1 */
   {
-    if( (Time->Hour>=0) && (Time->Hour<=23) ) Result=TRUE;
+    if( (Time->Hour<=23) )
+    {
+      if( (Time->Minute<=59) )
+      {
+        if( (Time->Second<=59) ) Result=TRUE;
+      }
+    }
   }
+
   return Result;
 }
 
+/* Kiem tra ki tu nhan tu UART co phai la cac so tu 0-9 khong */
+static unsigned char CheckRuleNumber(unsigned char *Data)
+{
+  unsigned char Count=0;
+  unsigned char Result=FALSE;
+
+  for(Count=3; Count<=8; Count++)
+  {
+    if( (Data[Count]>=48) && (Data[Count]<=57) ) Result=TRUE;
+    else break;
+  }
+
+  return Result;
+}
+
+/* Giai ma Data UART */
 static void Decode_Data(void)
 {
   DayTime_typedef NewTime;
@@ -183,38 +224,39 @@ static void Decode_Data(void)
   }
   else 
   {
-    if ( (Data_Read[1]=='H') && (Data_Read[2]=='G') )  /* Hen gio */
+    if( CheckRuleNumber(Data_Read)==TRUE ) /* Kiem tra dung la cac ki tu so */
     {
-      if( (Time_Mode==AM)||(Time_Mode==PM) )
+      if( CheckRuleTime(&NewTime)==TRUE ) /* Kiem tra dung dieu kien Time */
       {
-        if(CheckRuleTime(&NewTime) == TRUE) 
+        if ( (Data_Read[1]=='H') && (Data_Read[2]=='G') )  /* Hen gio */
         {
-          FlagHG=HG;
-          SetTimer = NewTime;
+          if( (Time_Mode==AM)||(Time_Mode==PM) )
+          {
+            FlagHG=HG;
+            SetTimer = NewTime;
+          }
         }
-      }
-    }
-    else if ( (Data_Read[1]=='A') && (Data_Read[2]=='M') ) /* AM */
-    {      
-      if(CheckRuleTime(&NewTime) == TRUE) 
-      {
-        Time_Mode=AM;
-        Watch = NewTime;
-      }
-    }
-    else if ( (Data_Read[1]=='P') && (Data_Read[2]=='M') ) /* PM */
-    {
-      if(CheckRuleTime(&NewTime) == TRUE) 
-      {
-        Time_Mode=PM;
-        Watch = NewTime;
-      }
-    }
-    else {}
-  }
+        else if ( (Data_Read[1]=='A') && (Data_Read[2]=='M') ) /* AM */
+        {    
+          Time_Mode=AM;
+          Watch = NewTime;
+        }
+        else if ( (Data_Read[1]=='P') && (Data_Read[2]=='M') ) /* PM */
+        {
+          Time_Mode=PM;
+          Watch = NewTime;
+        }
+        else {}
+
+      }/* CheckRuleTime */
+
+    }/* CheckRuleNumber */
+
+  } /* else START */
 
 }
 
+/* LED bao hen gio */
 static void LED_Alarm(void)
 {
   static unsigned char Step=0;
@@ -241,6 +283,7 @@ static void LED_Alarm(void)
   }
 }
 
+/* Dung LED hen gio */
 static void STOP_LED_Alarm(void)
 {
   Gpio_SetPinValue(PortD,LEDBLUE,HIGH);
@@ -249,6 +292,7 @@ static void STOP_LED_Alarm(void)
   Softtimer_StopTimer(Softtimer_Alarm);
 }
 
+/* Kiem tra co Start -> Bat dau dem */
 static void CheckAction_START(void)
 {
   if( (Time_Mode==AM) || (Time_Mode==PM) )
@@ -260,6 +304,7 @@ static void CheckAction_START(void)
   }
 }
 
+/* Kiem tra hen gio  */
 static void CheckTIMER_Alarm(void)
 {
   static unsigned char Step=0;
@@ -284,12 +329,13 @@ static void CheckTIMER_Alarm(void)
   else{}
 }
 
+/* Doc va kiem tra Data nhan tu UART */
 static void Check_Data_UART(void)
 {
   static unsigned char CheckFrame=0;
   unsigned char Count=0;
 
-  if( Length_Data_Read!=0 )
+  if( (Length_Data_Read!=0) )
   {
     if( (Data_Read[0]=='[') && ((Data_Read[6]==']')||(Data_Read[9]==']')) )
     {
@@ -299,7 +345,7 @@ static void Check_Data_UART(void)
             ((Data_Read[Count]>=65)&&(Data_Read[Count]<=90)) ||\
             (Data_Read[Count]=='[') || (Data_Read[Count]==']') )
         {
-          CheckFrame=1;
+          CheckFrame=1; /* Neu Frame dung */
         }
         else 
         {
@@ -309,7 +355,7 @@ static void Check_Data_UART(void)
         }
       }
 
-      if(CheckFrame == 1)
+      if(CheckFrame == 1) /* Neu Frame dung */
       {
         Decode_Data();
         CheckAction_START();
@@ -323,6 +369,7 @@ static void Check_Data_UART(void)
 
 }
 
+/* Chop tat so tren LED */
 static void LED_Blink(unsigned char Number)
 {
   static unsigned int TickBlink=0;
@@ -354,6 +401,7 @@ static void LED_Blink(unsigned char Number)
   
 }
 
+/* Nhan giu de vao Menu */
 static void SelectMainMenu(void)
 {
   static unsigned int Tickbutton1=0;
@@ -406,6 +454,8 @@ static void SelectMainMenu(void)
   }
 }
 
+/*  Chon vi tri so de thay doi 
+    Nhan giu 2 nut de luu */
 static unsigned char SelectBabyMenu(DayTime_typedef *Time, unsigned char *NumberPos)
 {
   unsigned char Result=FALSE;
@@ -472,6 +522,7 @@ static unsigned char SelectBabyMenu(DayTime_typedef *Time, unsigned char *Number
   return Result;
 }
 
+/* Menu chinh */
 static void MAIN_MENU(void)
 {
   static unsigned char PosNumber=1;
@@ -549,10 +600,15 @@ void MAIN_APP(void)
   Softtimer_Init();
   Uart_Init();
   SPI1_Init();
-  LPIT_Init_CH0(60000);
-  MAX7219_Init();
-
+  LPIT_Init(60000);
   APP_Init();
+
+  while( MAX7219_Init()==LED_Timeout ) /* Kiem tra ket noi voi LED */
+  {
+    Uart_Transmit(LED_ERR,10);
+    Uart_TxMainFunction();
+    LPIT_Delay_ms(2);
+  }
 
   while(1)
   {
@@ -571,7 +627,7 @@ void MAIN_APP(void)
     Softtimer_MainFunction();
     Uart_TxMainFunction();
 
-    LPIT_CH0_Delay_ms(2);
+    LPIT_Delay_ms(2);
   }
 
 }

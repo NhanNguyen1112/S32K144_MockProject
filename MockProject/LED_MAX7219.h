@@ -3,12 +3,18 @@
 
 #include "S32K144.h"
 
-void MAX7219_Init(void);
-void LCD_Print(unsigned char Pos, unsigned char Number);
-void LCD_TurnOff(unsigned char Pos);
-void LCD_TwoNumber(unsigned char Pos_1, unsigned char Pos_2, unsigned char Number);
-void LCD_TimeDisplay(unsigned char Hour, unsigned char Minute, unsigned char Second);
-void LCD_DayDisplay(unsigned char Day, unsigned char Month, unsigned char year);
+typedef enum LEDState
+{
+  LED_OK,
+  LED_Timeout
+}LEDState_enum;
+
+unsigned char MAX7219_Init(void);
+unsigned char LCD_Print(unsigned char Pos, unsigned char Number);
+unsigned char LCD_TurnOff(unsigned char Pos);
+unsigned char LCD_TwoNumber(unsigned char Pos_1, unsigned char Pos_2, unsigned char Number);
+unsigned char LCD_TimeDisplay(unsigned char Hour, unsigned char Minute, unsigned char Second);
+unsigned char LCD_DayDisplay(unsigned char Day, unsigned char Month, unsigned char year);
 
 #endif /* __LED_MAX7219__ */
 

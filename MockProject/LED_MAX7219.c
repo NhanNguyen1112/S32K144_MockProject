@@ -1,50 +1,60 @@
 #include "LED_MAX7219.h"
 
 /* LED 7-Segment MAX7219 */
-void MAX7219_Init(void)
+unsigned char MAX7219_Init(void)
 {
+  unsigned char State=LED_OK;
   unsigned short Data=0;
 
 	/* intensity*/
 	Data = 0x0A01;
-	SPI1_Transmit(&Data);
+	if( SPI1_Transmit(&Data)==Spi_TimeOut ) State=LED_Timeout;
 	
 	/* scan limit*/
 	Data = 0x0B07;
-	SPI1_Transmit(&Data);
+	if( SPI1_Transmit(&Data)==Spi_TimeOut ) State=LED_Timeout;
 
 	/* Normal Operation */
 	Data = 0x0C01;
-	SPI1_Transmit(&Data);
+	if( SPI1_Transmit(&Data)==Spi_TimeOut ) State=LED_Timeout;
 
 	/* Display Test */
 	/*SPI1_Send16bit(0x0F01);*/
  
 	/* Decode mode */
 	Data = 0x09FF;
-	SPI1_Transmit(&Data);
+	if( SPI1_Transmit(&Data)==Spi_TimeOut ) State=LED_Timeout;
 
-	/* set 1 for led 0 */
+	return State;
 }
 
-void LCD_Print(unsigned char Pos, unsigned char Number)
+unsigned char LCD_Print(unsigned char Pos, unsigned char Number)
 {
+  unsigned char State=LED_OK;
+
   unsigned short Data_Print;
   Data_Print = Number;
   Data_Print = (unsigned short)((Pos<<8) + (Data_Print));
-	SPI1_Transmit(&Data_Print);
+	if( SPI1_Transmit(&Data_Print)==Spi_TimeOut ) State=LED_Timeout;
+
+  return State;
 }
 
-void LCD_TurnOff(unsigned char Pos)
+unsigned char LCD_TurnOff(unsigned char Pos)
 {
+  unsigned char State=LED_OK;
+
   unsigned short Data_Print;
   Data_Print = 0x0F;
   Data_Print |= (Pos<<8);
-  SPI1_Transmit(&Data_Print);
+  if( SPI1_Transmit(&Data_Print)==Spi_TimeOut ) State=LED_Timeout;
+
+  return State;
 }
 
-void LCD_TwoNumber(unsigned char Pos_1, unsigned char Pos_2, unsigned char Number)
+unsigned char LCD_TwoNumber(unsigned char Pos_1, unsigned char Pos_2, unsigned char Number)
 {
+  unsigned char State=LED_OK;
   unsigned char So_DonVi;
   unsigned char So_Chuc;
 	So_DonVi=0;
@@ -53,30 +63,37 @@ void LCD_TwoNumber(unsigned char Pos_1, unsigned char Pos_2, unsigned char Numbe
   So_DonVi = (Number%10);
   So_Chuc = (Number/10);
 
-  LCD_Print(Pos_1, So_DonVi);
-  LCD_Print(Pos_2, So_Chuc);
+  if( LCD_Print(Pos_1, So_DonVi)==LED_Timeout ) State=LED_Timeout;
+  if( LCD_Print(Pos_2, So_Chuc)==LED_Timeout ) State=LED_Timeout;
 
+  return State;
 }
 
-void LCD_TimeDisplay(unsigned char Hour, unsigned char Minute, unsigned char Second)
+unsigned char LCD_TimeDisplay(unsigned char Hour, unsigned char Minute, unsigned char Second)
 {
-  LCD_TurnOff(3);
-  LCD_TurnOff(6);
+  unsigned char State=LED_OK;
 
-  LCD_TwoNumber(1,2,Second);
-  LCD_TwoNumber(4,5,Minute);
-  LCD_TwoNumber(7,8,Hour);
+  if( LCD_TurnOff(3)==LED_Timeout ) State=LED_Timeout;
+  if( LCD_TurnOff(6)==LED_Timeout ) State=LED_Timeout;
 
+  if( LCD_TwoNumber(1,2,Second)==LED_Timeout ) State=LED_Timeout;
+  if( LCD_TwoNumber(4,5,Minute)==LED_Timeout ) State=LED_Timeout;
+  if( LCD_TwoNumber(7,8,Hour)==LED_Timeout ) State=LED_Timeout;
+
+  return State;
 }
 
-void LCD_DayDisplay(unsigned char Day, unsigned char Month, unsigned char year)
+unsigned char LCD_DayDisplay(unsigned char Day, unsigned char Month, unsigned char year)
 {
-  LCD_TurnOff(3);
-  LCD_TurnOff(6);
+  unsigned char State=LED_OK;
 
-  LCD_TwoNumber(1,2,year);
-  LCD_TwoNumber(4,5,Month);
-  LCD_TwoNumber(7,8,Day);
+  if( LCD_TurnOff(3)==LED_Timeout ) State=LED_Timeout;
+  if( LCD_TurnOff(6)==LED_Timeout ) State=LED_Timeout;
 
+  if( LCD_TwoNumber(1,2,year)==LED_Timeout ) State=LED_Timeout;
+  if( LCD_TwoNumber(4,5,Month)==LED_Timeout ) State=LED_Timeout;
+  if( LCD_TwoNumber(7,8,Day)==LED_Timeout ) State=LED_Timeout;
+
+  return State; 
 }
 
