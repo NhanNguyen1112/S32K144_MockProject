@@ -73,8 +73,8 @@ unsigned char LCD_TimeDisplay(unsigned char Hour, unsigned char Minute, unsigned
 {
   unsigned char State=LED_OK;
 
-  if( LCD_TurnOff(3)==LED_Timeout ) State=LED_Timeout;
-  if( LCD_TurnOff(6)==LED_Timeout ) State=LED_Timeout;
+  if( LCD_Print(3,10)==LED_Timeout ) State=LED_Timeout;
+  if( LCD_Print(6,10)==LED_Timeout ) State=LED_Timeout;
 
   if( LCD_TwoNumber(1,2,Second)==LED_Timeout ) State=LED_Timeout;
   if( LCD_TwoNumber(4,5,Minute)==LED_Timeout ) State=LED_Timeout;
@@ -87,8 +87,8 @@ unsigned char LCD_DayDisplay(unsigned char Day, unsigned char Month, unsigned ch
 {
   unsigned char State=LED_OK;
 
-  if( LCD_TurnOff(3)==LED_Timeout ) State=LED_Timeout;
-  if( LCD_TurnOff(6)==LED_Timeout ) State=LED_Timeout;
+  if( LCD_Print(3,10)==LED_Timeout ) State=LED_Timeout;
+  if( LCD_Print(6,10)==LED_Timeout ) State=LED_Timeout;
 
   if( LCD_TwoNumber(1,2,year)==LED_Timeout ) State=LED_Timeout;
   if( LCD_TwoNumber(4,5,Month)==LED_Timeout ) State=LED_Timeout;

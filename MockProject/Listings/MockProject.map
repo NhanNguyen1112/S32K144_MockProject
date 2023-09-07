@@ -81,8 +81,8 @@ Section Cross References
     app_function.o(.text.Decode_Data) refers to app_function.o(.text.Link_Number) for Link_Number
     app_function.o(.text.Decode_Data) refers to app_function.o(.bss.FlagStart) for FlagStart
     app_function.o(.text.Decode_Data) refers to app_function.o(.text.CheckRuleNumber) for CheckRuleNumber
-    app_function.o(.text.Decode_Data) refers to app_function.o(.text.CheckRuleTime) for CheckRuleTime
     app_function.o(.text.Decode_Data) refers to app_function.o(.bss.Time_Mode) for Time_Mode
+    app_function.o(.text.Decode_Data) refers to app_function.o(.text.CheckRuleTime) for CheckRuleTime
     app_function.o(.text.Decode_Data) refers to app_function.o(.bss.FlagHG) for FlagHG
     app_function.o(.text.Decode_Data) refers to app_function.o(.bss.SetTimer) for SetTimer
     app_function.o(.text.Decode_Data) refers to app_function.o(.bss.Watch) for Watch
@@ -252,10 +252,10 @@ Section Cross References
     led_max7219.o(.ARM.exidx.text.LCD_TurnOff) refers to led_max7219.o(.text.LCD_TurnOff) for [Anonymous Symbol]
     led_max7219.o(.text.LCD_TwoNumber) refers to led_max7219.o(.text.LCD_Print) for LCD_Print
     led_max7219.o(.ARM.exidx.text.LCD_TwoNumber) refers to led_max7219.o(.text.LCD_TwoNumber) for [Anonymous Symbol]
-    led_max7219.o(.text.LCD_TimeDisplay) refers to led_max7219.o(.text.LCD_TurnOff) for LCD_TurnOff
+    led_max7219.o(.text.LCD_TimeDisplay) refers to led_max7219.o(.text.LCD_Print) for LCD_Print
     led_max7219.o(.text.LCD_TimeDisplay) refers to led_max7219.o(.text.LCD_TwoNumber) for LCD_TwoNumber
     led_max7219.o(.ARM.exidx.text.LCD_TimeDisplay) refers to led_max7219.o(.text.LCD_TimeDisplay) for [Anonymous Symbol]
-    led_max7219.o(.text.LCD_DayDisplay) refers to led_max7219.o(.text.LCD_TurnOff) for LCD_TurnOff
+    led_max7219.o(.text.LCD_DayDisplay) refers to led_max7219.o(.text.LCD_Print) for LCD_Print
     led_max7219.o(.text.LCD_DayDisplay) refers to led_max7219.o(.text.LCD_TwoNumber) for LCD_TwoNumber
     led_max7219.o(.ARM.exidx.text.LCD_DayDisplay) refers to led_max7219.o(.text.LCD_DayDisplay) for [Anonymous Symbol]
     startup.o(.text.init_data_bss) refers to startup_s32k144.o(.text) for __RAM_VECTOR_TABLE_SIZE
@@ -508,7 +508,7 @@ Removing Unused input sections from the image.
     Removing led_max7219.o(.ARM.exidx.text.LCD_TurnOff), (8 bytes).
     Removing led_max7219.o(.ARM.exidx.text.LCD_TwoNumber), (8 bytes).
     Removing led_max7219.o(.ARM.exidx.text.LCD_TimeDisplay), (8 bytes).
-    Removing led_max7219.o(.text.LCD_DayDisplay), (148 bytes).
+    Removing led_max7219.o(.text.LCD_DayDisplay), (152 bytes).
     Removing led_max7219.o(.ARM.exidx.text.LCD_DayDisplay), (8 bytes).
     Removing startup.o(.text), (0 bytes).
     Removing startup.o(.ARM.exidx.text.init_data_bss), (8 bytes).
@@ -521,7 +521,7 @@ Removing Unused input sections from the image.
     Removing system_s32k144.o(.data.SystemCoreClock), (4 bytes).
     Removing system_s32k144.o(.rodata.SystemCoreClockUpdate.fircFreq), (4 bytes).
 
-118 unused section(s) (total 2700 bytes) removed from the image.
+118 unused section(s) (total 2704 bytes) removed from the image.
 
 ==============================================================================
 
@@ -674,76 +674,76 @@ Image Symbol Table
     [Anonymous Symbol]                       0x0000076c   Section        0  app_function.o(.text.CheckTIMER_Alarm)
     Check_Data_UART                          0x00000839   Thumb Code   348  app_function.o(.text.Check_Data_UART)
     [Anonymous Symbol]                       0x00000838   Section        0  app_function.o(.text.Check_Data_UART)
-    Decode_Data                              0x00000995   Thumb Code   428  app_function.o(.text.Decode_Data)
+    Decode_Data                              0x00000995   Thumb Code   458  app_function.o(.text.Decode_Data)
     [Anonymous Symbol]                       0x00000994   Section        0  app_function.o(.text.Decode_Data)
-    [Anonymous Symbol]                       0x00000b40   Section        0  clock.o(.text.EnableClockPortB)
-    [Anonymous Symbol]                       0x00000b78   Section        0  clock.o(.text.EnableClockPortC)
-    [Anonymous Symbol]                       0x00000bb0   Section        0  clock.o(.text.EnableClockPortD)
-    [Anonymous Symbol]                       0x00000be8   Section        0  gpio.o(.text.Gpio_GetPinValue)
-    [Anonymous Symbol]                       0x00000c9c   Section        0  gpio.o(.text.Gpio_Init)
-    [Anonymous Symbol]                       0x00000da4   Section        0  gpio.o(.text.Gpio_SetPinValue)
-    [Anonymous Symbol]                       0x00000f0c   Section        0  led_max7219.o(.text.LCD_Print)
-    [Anonymous Symbol]                       0x00000f54   Section        0  led_max7219.o(.text.LCD_TimeDisplay)
-    [Anonymous Symbol]                       0x00000fe8   Section        0  led_max7219.o(.text.LCD_TurnOff)
-    [Anonymous Symbol]                       0x00001028   Section        0  led_max7219.o(.text.LCD_TwoNumber)
-    LED_Alarm                                0x000010b1   Thumb Code   192  app_function.o(.text.LED_Alarm)
-    [Anonymous Symbol]                       0x000010b0   Section        0  app_function.o(.text.LED_Alarm)
-    LED_BLINK_CONFIG                         0x00001171   Thumb Code   110  app_function.o(.text.LED_BLINK_CONFIG)
-    [Anonymous Symbol]                       0x00001170   Section        0  app_function.o(.text.LED_BLINK_CONFIG)
-    LED_BUTTON_INIT                          0x000011e1   Thumb Code     8  app_function.o(.text.LED_BUTTON_INIT)
-    [Anonymous Symbol]                       0x000011e0   Section        0  app_function.o(.text.LED_BUTTON_INIT)
-    LED_Blink                                0x000011e9   Thumb Code   274  app_function.o(.text.LED_Blink)
-    [Anonymous Symbol]                       0x000011e8   Section        0  app_function.o(.text.LED_Blink)
-    [Anonymous Symbol]                       0x000012fc   Section        0  lpit.o(.text.LPIT0_Ch0_IRQHandler)
-    [Anonymous Symbol]                       0x0000132c   Section        0  clock.o(.text.LPIT_CLK_ENABLE)
-    [Anonymous Symbol]                       0x000013f0   Section        0  lpit.o(.text.LPIT_Delay_ms)
-    [Anonymous Symbol]                       0x0000141c   Section        0  lpit.o(.text.LPIT_Init)
-    [Anonymous Symbol]                       0x00001480   Section        0  lpuart.o(.text.LPUART1_RxTx_IRQHandler)
-    Link_Number                              0x00001489   Thumb Code    32  app_function.o(.text.Link_Number)
-    [Anonymous Symbol]                       0x00001488   Section        0  app_function.o(.text.Link_Number)
-    [Anonymous Symbol]                       0x000014a8   Section        0  app_function.o(.text.MAIN_APP)
-    MAIN_MENU                                0x00001561   Thumb Code   388  app_function.o(.text.MAIN_MENU)
-    [Anonymous Symbol]                       0x00001560   Section        0  app_function.o(.text.MAIN_MENU)
-    [Anonymous Symbol]                       0x000016e4   Section        0  led_max7219.o(.text.MAX7219_Init)
-    [Anonymous Symbol]                       0x0000176c   Section        0  nvic.o(.text.NVIC_ClearPendingFlag)
-    [Anonymous Symbol]                       0x000017a0   Section        0  nvic.o(.text.NVIC_EnableInterrupt)
-    [Anonymous Symbol]                       0x000017d4   Section        0  nvic.o(.text.NVIC_SetPriority)
-    [Anonymous Symbol]                       0x0000180c   Section        0  gpio_isr.o(.text.PORTC_IRQHandler)
-    [Anonymous Symbol]                       0x00001870   Section        0  clock.o(.text.Run_Mode_Clock)
-    [Anonymous Symbol]                       0x0000191c   Section        0  clock.o(.text.SOSC_Init_8Mhz)
-    [Anonymous Symbol]                       0x00001994   Section        0  clock.o(.text.SPI1_CLK_ENABLE)
-    SPI1_GPIO_Config                         0x00001a59   Thumb Code   106  lpspi.o(.text.SPI1_GPIO_Config)
-    [Anonymous Symbol]                       0x00001a58   Section        0  lpspi.o(.text.SPI1_GPIO_Config)
-    [Anonymous Symbol]                       0x00001ac4   Section        0  lpspi.o(.text.SPI1_Init)
-    [Anonymous Symbol]                       0x00001b98   Section        0  lpspi.o(.text.SPI1_Transmit)
-    [Anonymous Symbol]                       0x00001bf8   Section        0  clock.o(.text.SPLL_Init)
-    STOP_LED_Alarm                           0x00001ccd   Thumb Code    48  app_function.o(.text.STOP_LED_Alarm)
-    [Anonymous Symbol]                       0x00001ccc   Section        0  app_function.o(.text.STOP_LED_Alarm)
-    SelectBabyMenu                           0x00001cfd   Thumb Code   448  app_function.o(.text.SelectBabyMenu)
-    [Anonymous Symbol]                       0x00001cfc   Section        0  app_function.o(.text.SelectBabyMenu)
-    SelectMainMenu                           0x00001ebd   Thumb Code   322  app_function.o(.text.SelectMainMenu)
-    [Anonymous Symbol]                       0x00001ebc   Section        0  app_function.o(.text.SelectMainMenu)
-    [Anonymous Symbol]                       0x00002000   Section        0  softtimer.o(.text.Softtimer_Init)
-    [Anonymous Symbol]                       0x00002098   Section        0  softtimer.o(.text.Softtimer_MainFunction)
-    [Anonymous Symbol]                       0x00002164   Section        0  softtimer.o(.text.Softtimer_StartTimer)
-    [Anonymous Symbol]                       0x000021c8   Section        0  softtimer.o(.text.Softtimer_StopTimer)
-    [Anonymous Symbol]                       0x000021e8   Section        0  softtimer.o(.text.SysTick_Handler)
-    [Anonymous Symbol]                       0x000021f8   Section        0  system_s32k144.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x0000224c   Section        0  clock.o(.text.UART1_CLK_ENABLE)
-    UART1_GPIO_Config                        0x00002311   Thumb Code    58  lpuart.o(.text.UART1_GPIO_Config)
-    [Anonymous Symbol]                       0x00002310   Section        0  lpuart.o(.text.UART1_GPIO_Config)
-    [Anonymous Symbol]                       0x0000234c   Section        0  lpuart.o(.text.Uart_GetReceiveData)
-    [Anonymous Symbol]                       0x00002404   Section        0  lpuart.o(.text.Uart_GetReceiveState)
-    [Anonymous Symbol]                       0x00002410   Section        0  lpuart.o(.text.Uart_Init)
-    [Anonymous Symbol]                       0x000024b4   Section        0  lpuart.o(.text.Uart_RxMainFunction)
-    [Anonymous Symbol]                       0x00002508   Section        0  lpuart.o(.text.Uart_Transmit)
-    [Anonymous Symbol]                       0x00002584   Section        0  lpuart.o(.text.Uart_TxMainFunction)
-    Watch_Display                            0x00002609   Thumb Code   198  app_function.o(.text.Watch_Display)
-    [Anonymous Symbol]                       0x00002608   Section        0  app_function.o(.text.Watch_Display)
-    [Anonymous Symbol]                       0x000026d0   Section        0  startup.o(.text.init_data_bss)
-    [Anonymous Symbol]                       0x00002770   Section        0  main.o(.text.main)
-    $v0                                      0x0000277c   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fpinit                             0x0000277c   Section       26  fpinit.o(x$fpl$fpinit)
+    [Anonymous Symbol]                       0x00000b60   Section        0  clock.o(.text.EnableClockPortB)
+    [Anonymous Symbol]                       0x00000b98   Section        0  clock.o(.text.EnableClockPortC)
+    [Anonymous Symbol]                       0x00000bd0   Section        0  clock.o(.text.EnableClockPortD)
+    [Anonymous Symbol]                       0x00000c08   Section        0  gpio.o(.text.Gpio_GetPinValue)
+    [Anonymous Symbol]                       0x00000cbc   Section        0  gpio.o(.text.Gpio_Init)
+    [Anonymous Symbol]                       0x00000dc4   Section        0  gpio.o(.text.Gpio_SetPinValue)
+    [Anonymous Symbol]                       0x00000f2c   Section        0  led_max7219.o(.text.LCD_Print)
+    [Anonymous Symbol]                       0x00000f74   Section        0  led_max7219.o(.text.LCD_TimeDisplay)
+    [Anonymous Symbol]                       0x0000100c   Section        0  led_max7219.o(.text.LCD_TurnOff)
+    [Anonymous Symbol]                       0x0000104c   Section        0  led_max7219.o(.text.LCD_TwoNumber)
+    LED_Alarm                                0x000010d5   Thumb Code   192  app_function.o(.text.LED_Alarm)
+    [Anonymous Symbol]                       0x000010d4   Section        0  app_function.o(.text.LED_Alarm)
+    LED_BLINK_CONFIG                         0x00001195   Thumb Code   110  app_function.o(.text.LED_BLINK_CONFIG)
+    [Anonymous Symbol]                       0x00001194   Section        0  app_function.o(.text.LED_BLINK_CONFIG)
+    LED_BUTTON_INIT                          0x00001205   Thumb Code     8  app_function.o(.text.LED_BUTTON_INIT)
+    [Anonymous Symbol]                       0x00001204   Section        0  app_function.o(.text.LED_BUTTON_INIT)
+    LED_Blink                                0x0000120d   Thumb Code   274  app_function.o(.text.LED_Blink)
+    [Anonymous Symbol]                       0x0000120c   Section        0  app_function.o(.text.LED_Blink)
+    [Anonymous Symbol]                       0x00001320   Section        0  lpit.o(.text.LPIT0_Ch0_IRQHandler)
+    [Anonymous Symbol]                       0x00001350   Section        0  clock.o(.text.LPIT_CLK_ENABLE)
+    [Anonymous Symbol]                       0x00001414   Section        0  lpit.o(.text.LPIT_Delay_ms)
+    [Anonymous Symbol]                       0x00001440   Section        0  lpit.o(.text.LPIT_Init)
+    [Anonymous Symbol]                       0x000014a4   Section        0  lpuart.o(.text.LPUART1_RxTx_IRQHandler)
+    Link_Number                              0x000014ad   Thumb Code    32  app_function.o(.text.Link_Number)
+    [Anonymous Symbol]                       0x000014ac   Section        0  app_function.o(.text.Link_Number)
+    [Anonymous Symbol]                       0x000014cc   Section        0  app_function.o(.text.MAIN_APP)
+    MAIN_MENU                                0x00001585   Thumb Code   388  app_function.o(.text.MAIN_MENU)
+    [Anonymous Symbol]                       0x00001584   Section        0  app_function.o(.text.MAIN_MENU)
+    [Anonymous Symbol]                       0x00001708   Section        0  led_max7219.o(.text.MAX7219_Init)
+    [Anonymous Symbol]                       0x00001790   Section        0  nvic.o(.text.NVIC_ClearPendingFlag)
+    [Anonymous Symbol]                       0x000017c4   Section        0  nvic.o(.text.NVIC_EnableInterrupt)
+    [Anonymous Symbol]                       0x000017f8   Section        0  nvic.o(.text.NVIC_SetPriority)
+    [Anonymous Symbol]                       0x00001830   Section        0  gpio_isr.o(.text.PORTC_IRQHandler)
+    [Anonymous Symbol]                       0x00001894   Section        0  clock.o(.text.Run_Mode_Clock)
+    [Anonymous Symbol]                       0x00001940   Section        0  clock.o(.text.SOSC_Init_8Mhz)
+    [Anonymous Symbol]                       0x000019b8   Section        0  clock.o(.text.SPI1_CLK_ENABLE)
+    SPI1_GPIO_Config                         0x00001a7d   Thumb Code   106  lpspi.o(.text.SPI1_GPIO_Config)
+    [Anonymous Symbol]                       0x00001a7c   Section        0  lpspi.o(.text.SPI1_GPIO_Config)
+    [Anonymous Symbol]                       0x00001ae8   Section        0  lpspi.o(.text.SPI1_Init)
+    [Anonymous Symbol]                       0x00001bbc   Section        0  lpspi.o(.text.SPI1_Transmit)
+    [Anonymous Symbol]                       0x00001c1c   Section        0  clock.o(.text.SPLL_Init)
+    STOP_LED_Alarm                           0x00001cf1   Thumb Code    48  app_function.o(.text.STOP_LED_Alarm)
+    [Anonymous Symbol]                       0x00001cf0   Section        0  app_function.o(.text.STOP_LED_Alarm)
+    SelectBabyMenu                           0x00001d21   Thumb Code   448  app_function.o(.text.SelectBabyMenu)
+    [Anonymous Symbol]                       0x00001d20   Section        0  app_function.o(.text.SelectBabyMenu)
+    SelectMainMenu                           0x00001ee1   Thumb Code   322  app_function.o(.text.SelectMainMenu)
+    [Anonymous Symbol]                       0x00001ee0   Section        0  app_function.o(.text.SelectMainMenu)
+    [Anonymous Symbol]                       0x00002024   Section        0  softtimer.o(.text.Softtimer_Init)
+    [Anonymous Symbol]                       0x000020bc   Section        0  softtimer.o(.text.Softtimer_MainFunction)
+    [Anonymous Symbol]                       0x00002188   Section        0  softtimer.o(.text.Softtimer_StartTimer)
+    [Anonymous Symbol]                       0x000021ec   Section        0  softtimer.o(.text.Softtimer_StopTimer)
+    [Anonymous Symbol]                       0x0000220c   Section        0  softtimer.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x0000221c   Section        0  system_s32k144.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x00002270   Section        0  clock.o(.text.UART1_CLK_ENABLE)
+    UART1_GPIO_Config                        0x00002335   Thumb Code    58  lpuart.o(.text.UART1_GPIO_Config)
+    [Anonymous Symbol]                       0x00002334   Section        0  lpuart.o(.text.UART1_GPIO_Config)
+    [Anonymous Symbol]                       0x00002370   Section        0  lpuart.o(.text.Uart_GetReceiveData)
+    [Anonymous Symbol]                       0x00002428   Section        0  lpuart.o(.text.Uart_GetReceiveState)
+    [Anonymous Symbol]                       0x00002434   Section        0  lpuart.o(.text.Uart_Init)
+    [Anonymous Symbol]                       0x000024d8   Section        0  lpuart.o(.text.Uart_RxMainFunction)
+    [Anonymous Symbol]                       0x0000252c   Section        0  lpuart.o(.text.Uart_Transmit)
+    [Anonymous Symbol]                       0x000025a8   Section        0  lpuart.o(.text.Uart_TxMainFunction)
+    Watch_Display                            0x0000262d   Thumb Code   198  app_function.o(.text.Watch_Display)
+    [Anonymous Symbol]                       0x0000262c   Section        0  app_function.o(.text.Watch_Display)
+    [Anonymous Symbol]                       0x000026f4   Section        0  startup.o(.text.init_data_bss)
+    [Anonymous Symbol]                       0x00002794   Section        0  main.o(.text.main)
+    $v0                                      0x000027a0   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x000027a0   Section       26  fpinit.o(x$fpl$fpinit)
     LED_ERR                                  0x1fff8400   Data          10  app_function.o(.data.LED_ERR)
     [Anonymous Symbol]                       0x1fff8400   Section        0  app_function.o(.data.LED_ERR)
     MAIN_MENU.PosNumber                      0x1fff840a   Data           1  app_function.o(.data.MAIN_MENU.PosNumber)
@@ -1071,54 +1071,54 @@ Image Symbol Table
     __semihosting_library_function           0x00000565   Thumb Code     0  indicate_semi.o(.text)
     _sys_exit                                0x00000565   Thumb Code     8  sys_exit.o(.text)
     BufferClear                              0x0000060d   Thumb Code    50  string.o(.text.BufferClear)
-    EnableClockPortB                         0x00000b41   Thumb Code    56  clock.o(.text.EnableClockPortB)
-    EnableClockPortC                         0x00000b79   Thumb Code    56  clock.o(.text.EnableClockPortC)
-    EnableClockPortD                         0x00000bb1   Thumb Code    56  clock.o(.text.EnableClockPortD)
-    Gpio_GetPinValue                         0x00000be9   Thumb Code   180  gpio.o(.text.Gpio_GetPinValue)
-    Gpio_Init                                0x00000c9d   Thumb Code   262  gpio.o(.text.Gpio_Init)
-    Gpio_SetPinValue                         0x00000da5   Thumb Code   358  gpio.o(.text.Gpio_SetPinValue)
-    LCD_Print                                0x00000f0d   Thumb Code    72  led_max7219.o(.text.LCD_Print)
-    LCD_TimeDisplay                          0x00000f55   Thumb Code   148  led_max7219.o(.text.LCD_TimeDisplay)
-    LCD_TurnOff                              0x00000fe9   Thumb Code    64  led_max7219.o(.text.LCD_TurnOff)
-    LCD_TwoNumber                            0x00001029   Thumb Code   134  led_max7219.o(.text.LCD_TwoNumber)
-    LPIT0_Ch0_IRQHandler                     0x000012fd   Thumb Code    46  lpit.o(.text.LPIT0_Ch0_IRQHandler)
-    LPIT_CLK_ENABLE                          0x0000132d   Thumb Code   196  clock.o(.text.LPIT_CLK_ENABLE)
-    LPIT_Delay_ms                            0x000013f1   Thumb Code    42  lpit.o(.text.LPIT_Delay_ms)
-    LPIT_Init                                0x0000141d   Thumb Code    98  lpit.o(.text.LPIT_Init)
-    LPUART1_RxTx_IRQHandler                  0x00001481   Thumb Code     8  lpuart.o(.text.LPUART1_RxTx_IRQHandler)
-    MAIN_APP                                 0x000014a9   Thumb Code   182  app_function.o(.text.MAIN_APP)
-    MAX7219_Init                             0x000016e5   Thumb Code   134  led_max7219.o(.text.MAX7219_Init)
-    NVIC_ClearPendingFlag                    0x0000176d   Thumb Code    50  nvic.o(.text.NVIC_ClearPendingFlag)
-    NVIC_EnableInterrupt                     0x000017a1   Thumb Code    50  nvic.o(.text.NVIC_EnableInterrupt)
-    NVIC_SetPriority                         0x000017d5   Thumb Code    54  nvic.o(.text.NVIC_SetPriority)
-    PORTC_IRQHandler                         0x0000180d   Thumb Code    98  gpio_isr.o(.text.PORTC_IRQHandler)
-    Run_Mode_Clock                           0x00001871   Thumb Code   170  clock.o(.text.Run_Mode_Clock)
-    SOSC_Init_8Mhz                           0x0000191d   Thumb Code   120  clock.o(.text.SOSC_Init_8Mhz)
-    SPI1_CLK_ENABLE                          0x00001995   Thumb Code   196  clock.o(.text.SPI1_CLK_ENABLE)
-    SPI1_Init                                0x00001ac5   Thumb Code   212  lpspi.o(.text.SPI1_Init)
-    SPI1_Transmit                            0x00001b99   Thumb Code    94  lpspi.o(.text.SPI1_Transmit)
-    SPLL_Init                                0x00001bf9   Thumb Code   210  clock.o(.text.SPLL_Init)
-    Softtimer_Init                           0x00002001   Thumb Code   152  softtimer.o(.text.Softtimer_Init)
-    Softtimer_MainFunction                   0x00002099   Thumb Code   202  softtimer.o(.text.Softtimer_MainFunction)
-    Softtimer_StartTimer                     0x00002165   Thumb Code   100  softtimer.o(.text.Softtimer_StartTimer)
-    Softtimer_StopTimer                      0x000021c9   Thumb Code    30  softtimer.o(.text.Softtimer_StopTimer)
-    SysTick_Handler                          0x000021e9   Thumb Code    16  softtimer.o(.text.SysTick_Handler)
-    SystemInit                               0x000021f9   Thumb Code    82  system_s32k144.o(.text.SystemInit)
-    UART1_CLK_ENABLE                         0x0000224d   Thumb Code   196  clock.o(.text.UART1_CLK_ENABLE)
-    Uart_GetReceiveData                      0x0000234d   Thumb Code   184  lpuart.o(.text.Uart_GetReceiveData)
-    Uart_GetReceiveState                     0x00002405   Thumb Code    12  lpuart.o(.text.Uart_GetReceiveState)
-    Uart_Init                                0x00002411   Thumb Code   164  lpuart.o(.text.Uart_Init)
-    Uart_RxMainFunction                      0x000024b5   Thumb Code    82  lpuart.o(.text.Uart_RxMainFunction)
-    Uart_Transmit                            0x00002509   Thumb Code   122  lpuart.o(.text.Uart_Transmit)
-    Uart_TxMainFunction                      0x00002585   Thumb Code   130  lpuart.o(.text.Uart_TxMainFunction)
-    init_data_bss                            0x000026d1   Thumb Code   160  startup.o(.text.init_data_bss)
-    main                                     0x00002771   Thumb Code    12  main.o(.text.main)
-    _fp_init                                 0x0000277d   Thumb Code    26  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x00002795   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x00002795   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    Region$$Table$$Base                      0x00002798   Number         0  anon$$obj.o(Region$$Table)
-    Image$$ER_m_text$$Limit                  0x000027b8   Number         0  anon$$obj.o ABSOLUTE
-    Region$$Table$$Limit                     0x000027b8   Number         0  anon$$obj.o(Region$$Table)
+    EnableClockPortB                         0x00000b61   Thumb Code    56  clock.o(.text.EnableClockPortB)
+    EnableClockPortC                         0x00000b99   Thumb Code    56  clock.o(.text.EnableClockPortC)
+    EnableClockPortD                         0x00000bd1   Thumb Code    56  clock.o(.text.EnableClockPortD)
+    Gpio_GetPinValue                         0x00000c09   Thumb Code   180  gpio.o(.text.Gpio_GetPinValue)
+    Gpio_Init                                0x00000cbd   Thumb Code   262  gpio.o(.text.Gpio_Init)
+    Gpio_SetPinValue                         0x00000dc5   Thumb Code   358  gpio.o(.text.Gpio_SetPinValue)
+    LCD_Print                                0x00000f2d   Thumb Code    72  led_max7219.o(.text.LCD_Print)
+    LCD_TimeDisplay                          0x00000f75   Thumb Code   152  led_max7219.o(.text.LCD_TimeDisplay)
+    LCD_TurnOff                              0x0000100d   Thumb Code    64  led_max7219.o(.text.LCD_TurnOff)
+    LCD_TwoNumber                            0x0000104d   Thumb Code   134  led_max7219.o(.text.LCD_TwoNumber)
+    LPIT0_Ch0_IRQHandler                     0x00001321   Thumb Code    46  lpit.o(.text.LPIT0_Ch0_IRQHandler)
+    LPIT_CLK_ENABLE                          0x00001351   Thumb Code   196  clock.o(.text.LPIT_CLK_ENABLE)
+    LPIT_Delay_ms                            0x00001415   Thumb Code    42  lpit.o(.text.LPIT_Delay_ms)
+    LPIT_Init                                0x00001441   Thumb Code    98  lpit.o(.text.LPIT_Init)
+    LPUART1_RxTx_IRQHandler                  0x000014a5   Thumb Code     8  lpuart.o(.text.LPUART1_RxTx_IRQHandler)
+    MAIN_APP                                 0x000014cd   Thumb Code   182  app_function.o(.text.MAIN_APP)
+    MAX7219_Init                             0x00001709   Thumb Code   134  led_max7219.o(.text.MAX7219_Init)
+    NVIC_ClearPendingFlag                    0x00001791   Thumb Code    50  nvic.o(.text.NVIC_ClearPendingFlag)
+    NVIC_EnableInterrupt                     0x000017c5   Thumb Code    50  nvic.o(.text.NVIC_EnableInterrupt)
+    NVIC_SetPriority                         0x000017f9   Thumb Code    54  nvic.o(.text.NVIC_SetPriority)
+    PORTC_IRQHandler                         0x00001831   Thumb Code    98  gpio_isr.o(.text.PORTC_IRQHandler)
+    Run_Mode_Clock                           0x00001895   Thumb Code   170  clock.o(.text.Run_Mode_Clock)
+    SOSC_Init_8Mhz                           0x00001941   Thumb Code   120  clock.o(.text.SOSC_Init_8Mhz)
+    SPI1_CLK_ENABLE                          0x000019b9   Thumb Code   196  clock.o(.text.SPI1_CLK_ENABLE)
+    SPI1_Init                                0x00001ae9   Thumb Code   212  lpspi.o(.text.SPI1_Init)
+    SPI1_Transmit                            0x00001bbd   Thumb Code    94  lpspi.o(.text.SPI1_Transmit)
+    SPLL_Init                                0x00001c1d   Thumb Code   210  clock.o(.text.SPLL_Init)
+    Softtimer_Init                           0x00002025   Thumb Code   152  softtimer.o(.text.Softtimer_Init)
+    Softtimer_MainFunction                   0x000020bd   Thumb Code   202  softtimer.o(.text.Softtimer_MainFunction)
+    Softtimer_StartTimer                     0x00002189   Thumb Code   100  softtimer.o(.text.Softtimer_StartTimer)
+    Softtimer_StopTimer                      0x000021ed   Thumb Code    30  softtimer.o(.text.Softtimer_StopTimer)
+    SysTick_Handler                          0x0000220d   Thumb Code    16  softtimer.o(.text.SysTick_Handler)
+    SystemInit                               0x0000221d   Thumb Code    82  system_s32k144.o(.text.SystemInit)
+    UART1_CLK_ENABLE                         0x00002271   Thumb Code   196  clock.o(.text.UART1_CLK_ENABLE)
+    Uart_GetReceiveData                      0x00002371   Thumb Code   184  lpuart.o(.text.Uart_GetReceiveData)
+    Uart_GetReceiveState                     0x00002429   Thumb Code    12  lpuart.o(.text.Uart_GetReceiveState)
+    Uart_Init                                0x00002435   Thumb Code   164  lpuart.o(.text.Uart_Init)
+    Uart_RxMainFunction                      0x000024d9   Thumb Code    82  lpuart.o(.text.Uart_RxMainFunction)
+    Uart_Transmit                            0x0000252d   Thumb Code   122  lpuart.o(.text.Uart_Transmit)
+    Uart_TxMainFunction                      0x000025a9   Thumb Code   130  lpuart.o(.text.Uart_TxMainFunction)
+    init_data_bss                            0x000026f5   Thumb Code   160  startup.o(.text.init_data_bss)
+    main                                     0x00002795   Thumb Code    12  main.o(.text.main)
+    _fp_init                                 0x000027a1   Thumb Code    26  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x000027b9   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x000027b9   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x000027bc   Number         0  anon$$obj.o(Region$$Table)
+    Image$$ER_m_text$$Limit                  0x000027dc   Number         0  anon$$obj.o ABSOLUTE
+    Region$$Table$$Limit                     0x000027dc   Number         0  anon$$obj.o(Region$$Table)
     Image$$VECTOR_RAM$$Base                  0x1fff8000   Number         0  anon$$obj.o ABSOLUTE
     Image$$RW_m_data$$Base                   0x1fff8400   Number         0  anon$$obj.o ABSOLUTE
     Image$$RW_m_code$$Base                   0x1fff840c   Number         0  anon$$obj.o ABSOLUTE
@@ -1143,7 +1143,7 @@ Memory Map of the image
 
   Image Entry point : 0x00000415
 
-  Load Region LR_m_text (Base: 0x00000000, Size: 0x000027c4, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_m_text (Base: 0x00000000, Size: 0x000027e8, Max: 0x00080000, ABSOLUTE)
 
     Execution Region VECTOR_ROM (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000230, Max: 0x00000400, ABSOLUTE)
 
@@ -1166,7 +1166,7 @@ Memory Map of the image
     0x00000410   0x00000410   0x00000004   Data   RO          286    .rodata.s_vectors   startup.o
 
 
-    Execution Region ER_m_text (Exec base: 0x00000414, Load base: 0x00000414, Size: 0x000023a4, Max: 0x0007fbf0, ABSOLUTE)
+    Execution Region ER_m_text (Exec base: 0x00000414, Load base: 0x00000414, Size: 0x000023c8, Max: 0x0007fbf0, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1233,91 +1233,92 @@ Memory Map of the image
     0x000006e8   0x000006e8   0x00000084   Code   RO           36    .text.CheckRuleTime  app_function.o
     0x0000076c   0x0000076c   0x000000cc   Code   RO           24    .text.CheckTIMER_Alarm  app_function.o
     0x00000838   0x00000838   0x0000015c   Code   RO           22    .text.Check_Data_UART  app_function.o
-    0x00000994   0x00000994   0x000001ac   Code   RO           28    .text.Decode_Data   app_function.o
-    0x00000b40   0x00000b40   0x00000038   Code   RO          135    .text.EnableClockPortB  clock.o
-    0x00000b78   0x00000b78   0x00000038   Code   RO          137    .text.EnableClockPortC  clock.o
-    0x00000bb0   0x00000bb0   0x00000038   Code   RO          139    .text.EnableClockPortD  clock.o
-    0x00000be8   0x00000be8   0x000000b4   Code   RO          101    .text.Gpio_GetPinValue  gpio.o
-    0x00000c9c   0x00000c9c   0x00000106   Code   RO           99    .text.Gpio_Init     gpio.o
-    0x00000da2   0x00000da2   0x00000002   PAD
-    0x00000da4   0x00000da4   0x00000166   Code   RO          103    .text.Gpio_SetPinValue  gpio.o
-    0x00000f0a   0x00000f0a   0x00000002   PAD
-    0x00000f0c   0x00000f0c   0x00000048   Code   RO          267    .text.LCD_Print     led_max7219.o
-    0x00000f54   0x00000f54   0x00000094   Code   RO          273    .text.LCD_TimeDisplay  led_max7219.o
-    0x00000fe8   0x00000fe8   0x00000040   Code   RO          269    .text.LCD_TurnOff   led_max7219.o
-    0x00001028   0x00001028   0x00000086   Code   RO          271    .text.LCD_TwoNumber  led_max7219.o
-    0x000010ae   0x000010ae   0x00000002   PAD
-    0x000010b0   0x000010b0   0x000000c0   Code   RO           40    .text.LED_Alarm     app_function.o
-    0x00001170   0x00001170   0x0000006e   Code   RO           48    .text.LED_BLINK_CONFIG  app_function.o
-    0x000011de   0x000011de   0x00000002   PAD
-    0x000011e0   0x000011e0   0x00000008   Code   RO           20    .text.LED_BUTTON_INIT  app_function.o
-    0x000011e8   0x000011e8   0x00000112   Code   RO           44    .text.LED_Blink     app_function.o
-    0x000012fa   0x000012fa   0x00000002   PAD
-    0x000012fc   0x000012fc   0x0000002e   Code   RO          183    .text.LPIT0_Ch0_IRQHandler  lpit.o
-    0x0000132a   0x0000132a   0x00000002   PAD
-    0x0000132c   0x0000132c   0x000000c4   Code   RO          143    .text.LPIT_CLK_ENABLE  clock.o
-    0x000013f0   0x000013f0   0x0000002a   Code   RO          185    .text.LPIT_Delay_ms  lpit.o
-    0x0000141a   0x0000141a   0x00000002   PAD
-    0x0000141c   0x0000141c   0x00000062   Code   RO          181    .text.LPIT_Init     lpit.o
-    0x0000147e   0x0000147e   0x00000002   PAD
-    0x00001480   0x00001480   0x00000008   Code   RO          212    .text.LPUART1_RxTx_IRQHandler  lpuart.o
-    0x00001488   0x00001488   0x00000020   Code   RO           32    .text.Link_Number   app_function.o
-    0x000014a8   0x000014a8   0x000000b6   Code   RO           14    .text.MAIN_APP      app_function.o
-    0x0000155e   0x0000155e   0x00000002   PAD
-    0x00001560   0x00001560   0x00000184   Code   RO           26    .text.MAIN_MENU     app_function.o
-    0x000016e4   0x000016e4   0x00000086   Code   RO          265    .text.MAX7219_Init  led_max7219.o
-    0x0000176a   0x0000176a   0x00000002   PAD
-    0x0000176c   0x0000176c   0x00000032   Code   RO           88    .text.NVIC_ClearPendingFlag  nvic.o
-    0x0000179e   0x0000179e   0x00000002   PAD
-    0x000017a0   0x000017a0   0x00000032   Code   RO           84    .text.NVIC_EnableInterrupt  nvic.o
-    0x000017d2   0x000017d2   0x00000002   PAD
-    0x000017d4   0x000017d4   0x00000036   Code   RO           90    .text.NVIC_SetPriority  nvic.o
-    0x0000180a   0x0000180a   0x00000002   PAD
-    0x0000180c   0x0000180c   0x00000062   Code   RO          114    .text.PORTC_IRQHandler  gpio_isr.o
-    0x0000186e   0x0000186e   0x00000002   PAD
-    0x00001870   0x00001870   0x000000aa   Code   RO          127    .text.Run_Mode_Clock  clock.o
-    0x0000191a   0x0000191a   0x00000002   PAD
-    0x0000191c   0x0000191c   0x00000078   Code   RO          123    .text.SOSC_Init_8Mhz  clock.o
-    0x00001994   0x00001994   0x000000c4   Code   RO          151    .text.SPI1_CLK_ENABLE  clock.o
-    0x00001a58   0x00001a58   0x0000006a   Code   RO          233    .text.SPI1_GPIO_Config  lpspi.o
-    0x00001ac2   0x00001ac2   0x00000002   PAD
-    0x00001ac4   0x00001ac4   0x000000d4   Code   RO          231    .text.SPI1_Init     lpspi.o
-    0x00001b98   0x00001b98   0x0000005e   Code   RO          235    .text.SPI1_Transmit  lpspi.o
-    0x00001bf6   0x00001bf6   0x00000002   PAD
-    0x00001bf8   0x00001bf8   0x000000d2   Code   RO          125    .text.SPLL_Init     clock.o
-    0x00001cca   0x00001cca   0x00000002   PAD
-    0x00001ccc   0x00001ccc   0x00000030   Code   RO           50    .text.STOP_LED_Alarm  app_function.o
-    0x00001cfc   0x00001cfc   0x000001c0   Code   RO           46    .text.SelectBabyMenu  app_function.o
-    0x00001ebc   0x00001ebc   0x00000142   Code   RO           42    .text.SelectMainMenu  app_function.o
-    0x00001ffe   0x00001ffe   0x00000002   PAD
-    0x00002000   0x00002000   0x00000098   Code   RO          162    .text.Softtimer_Init  softtimer.o
-    0x00002098   0x00002098   0x000000ca   Code   RO          168    .text.Softtimer_MainFunction  softtimer.o
-    0x00002162   0x00002162   0x00000002   PAD
-    0x00002164   0x00002164   0x00000064   Code   RO          164    .text.Softtimer_StartTimer  softtimer.o
-    0x000021c8   0x000021c8   0x0000001e   Code   RO          166    .text.Softtimer_StopTimer  softtimer.o
-    0x000021e6   0x000021e6   0x00000002   PAD
-    0x000021e8   0x000021e8   0x00000010   Code   RO          170    .text.SysTick_Handler  softtimer.o
-    0x000021f8   0x000021f8   0x00000052   Code   RO          301    .text.SystemInit    system_s32k144.o
-    0x0000224a   0x0000224a   0x00000002   PAD
-    0x0000224c   0x0000224c   0x000000c4   Code   RO          147    .text.UART1_CLK_ENABLE  clock.o
-    0x00002310   0x00002310   0x0000003a   Code   RO          198    .text.UART1_GPIO_Config  lpuart.o
-    0x0000234a   0x0000234a   0x00000002   PAD
-    0x0000234c   0x0000234c   0x000000b8   Code   RO          206    .text.Uart_GetReceiveData  lpuart.o
-    0x00002404   0x00002404   0x0000000c   Code   RO          208    .text.Uart_GetReceiveState  lpuart.o
-    0x00002410   0x00002410   0x000000a4   Code   RO          196    .text.Uart_Init     lpuart.o
-    0x000024b4   0x000024b4   0x00000052   Code   RO          210    .text.Uart_RxMainFunction  lpuart.o
-    0x00002506   0x00002506   0x00000002   PAD
-    0x00002508   0x00002508   0x0000007a   Code   RO          200    .text.Uart_Transmit  lpuart.o
-    0x00002582   0x00002582   0x00000002   PAD
-    0x00002584   0x00002584   0x00000082   Code   RO          204    .text.Uart_TxMainFunction  lpuart.o
-    0x00002606   0x00002606   0x00000002   PAD
-    0x00002608   0x00002608   0x000000c6   Code   RO           38    .text.Watch_Display  app_function.o
-    0x000026ce   0x000026ce   0x00000002   PAD
-    0x000026d0   0x000026d0   0x000000a0   Code   RO          284    .text.init_data_bss  startup.o
-    0x00002770   0x00002770   0x0000000c   Code   RO            5    .text.main          main.o
-    0x0000277c   0x0000277c   0x0000001a   Code   RO          422    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x00002796   0x00002796   0x00000002   PAD
-    0x00002798   0x00002798   0x00000020   Data   RO          494    Region$$Table       anon$$obj.o
+    0x00000994   0x00000994   0x000001ca   Code   RO           28    .text.Decode_Data   app_function.o
+    0x00000b5e   0x00000b5e   0x00000002   PAD
+    0x00000b60   0x00000b60   0x00000038   Code   RO          135    .text.EnableClockPortB  clock.o
+    0x00000b98   0x00000b98   0x00000038   Code   RO          137    .text.EnableClockPortC  clock.o
+    0x00000bd0   0x00000bd0   0x00000038   Code   RO          139    .text.EnableClockPortD  clock.o
+    0x00000c08   0x00000c08   0x000000b4   Code   RO          101    .text.Gpio_GetPinValue  gpio.o
+    0x00000cbc   0x00000cbc   0x00000106   Code   RO           99    .text.Gpio_Init     gpio.o
+    0x00000dc2   0x00000dc2   0x00000002   PAD
+    0x00000dc4   0x00000dc4   0x00000166   Code   RO          103    .text.Gpio_SetPinValue  gpio.o
+    0x00000f2a   0x00000f2a   0x00000002   PAD
+    0x00000f2c   0x00000f2c   0x00000048   Code   RO          267    .text.LCD_Print     led_max7219.o
+    0x00000f74   0x00000f74   0x00000098   Code   RO          273    .text.LCD_TimeDisplay  led_max7219.o
+    0x0000100c   0x0000100c   0x00000040   Code   RO          269    .text.LCD_TurnOff   led_max7219.o
+    0x0000104c   0x0000104c   0x00000086   Code   RO          271    .text.LCD_TwoNumber  led_max7219.o
+    0x000010d2   0x000010d2   0x00000002   PAD
+    0x000010d4   0x000010d4   0x000000c0   Code   RO           40    .text.LED_Alarm     app_function.o
+    0x00001194   0x00001194   0x0000006e   Code   RO           48    .text.LED_BLINK_CONFIG  app_function.o
+    0x00001202   0x00001202   0x00000002   PAD
+    0x00001204   0x00001204   0x00000008   Code   RO           20    .text.LED_BUTTON_INIT  app_function.o
+    0x0000120c   0x0000120c   0x00000112   Code   RO           44    .text.LED_Blink     app_function.o
+    0x0000131e   0x0000131e   0x00000002   PAD
+    0x00001320   0x00001320   0x0000002e   Code   RO          183    .text.LPIT0_Ch0_IRQHandler  lpit.o
+    0x0000134e   0x0000134e   0x00000002   PAD
+    0x00001350   0x00001350   0x000000c4   Code   RO          143    .text.LPIT_CLK_ENABLE  clock.o
+    0x00001414   0x00001414   0x0000002a   Code   RO          185    .text.LPIT_Delay_ms  lpit.o
+    0x0000143e   0x0000143e   0x00000002   PAD
+    0x00001440   0x00001440   0x00000062   Code   RO          181    .text.LPIT_Init     lpit.o
+    0x000014a2   0x000014a2   0x00000002   PAD
+    0x000014a4   0x000014a4   0x00000008   Code   RO          212    .text.LPUART1_RxTx_IRQHandler  lpuart.o
+    0x000014ac   0x000014ac   0x00000020   Code   RO           32    .text.Link_Number   app_function.o
+    0x000014cc   0x000014cc   0x000000b6   Code   RO           14    .text.MAIN_APP      app_function.o
+    0x00001582   0x00001582   0x00000002   PAD
+    0x00001584   0x00001584   0x00000184   Code   RO           26    .text.MAIN_MENU     app_function.o
+    0x00001708   0x00001708   0x00000086   Code   RO          265    .text.MAX7219_Init  led_max7219.o
+    0x0000178e   0x0000178e   0x00000002   PAD
+    0x00001790   0x00001790   0x00000032   Code   RO           88    .text.NVIC_ClearPendingFlag  nvic.o
+    0x000017c2   0x000017c2   0x00000002   PAD
+    0x000017c4   0x000017c4   0x00000032   Code   RO           84    .text.NVIC_EnableInterrupt  nvic.o
+    0x000017f6   0x000017f6   0x00000002   PAD
+    0x000017f8   0x000017f8   0x00000036   Code   RO           90    .text.NVIC_SetPriority  nvic.o
+    0x0000182e   0x0000182e   0x00000002   PAD
+    0x00001830   0x00001830   0x00000062   Code   RO          114    .text.PORTC_IRQHandler  gpio_isr.o
+    0x00001892   0x00001892   0x00000002   PAD
+    0x00001894   0x00001894   0x000000aa   Code   RO          127    .text.Run_Mode_Clock  clock.o
+    0x0000193e   0x0000193e   0x00000002   PAD
+    0x00001940   0x00001940   0x00000078   Code   RO          123    .text.SOSC_Init_8Mhz  clock.o
+    0x000019b8   0x000019b8   0x000000c4   Code   RO          151    .text.SPI1_CLK_ENABLE  clock.o
+    0x00001a7c   0x00001a7c   0x0000006a   Code   RO          233    .text.SPI1_GPIO_Config  lpspi.o
+    0x00001ae6   0x00001ae6   0x00000002   PAD
+    0x00001ae8   0x00001ae8   0x000000d4   Code   RO          231    .text.SPI1_Init     lpspi.o
+    0x00001bbc   0x00001bbc   0x0000005e   Code   RO          235    .text.SPI1_Transmit  lpspi.o
+    0x00001c1a   0x00001c1a   0x00000002   PAD
+    0x00001c1c   0x00001c1c   0x000000d2   Code   RO          125    .text.SPLL_Init     clock.o
+    0x00001cee   0x00001cee   0x00000002   PAD
+    0x00001cf0   0x00001cf0   0x00000030   Code   RO           50    .text.STOP_LED_Alarm  app_function.o
+    0x00001d20   0x00001d20   0x000001c0   Code   RO           46    .text.SelectBabyMenu  app_function.o
+    0x00001ee0   0x00001ee0   0x00000142   Code   RO           42    .text.SelectMainMenu  app_function.o
+    0x00002022   0x00002022   0x00000002   PAD
+    0x00002024   0x00002024   0x00000098   Code   RO          162    .text.Softtimer_Init  softtimer.o
+    0x000020bc   0x000020bc   0x000000ca   Code   RO          168    .text.Softtimer_MainFunction  softtimer.o
+    0x00002186   0x00002186   0x00000002   PAD
+    0x00002188   0x00002188   0x00000064   Code   RO          164    .text.Softtimer_StartTimer  softtimer.o
+    0x000021ec   0x000021ec   0x0000001e   Code   RO          166    .text.Softtimer_StopTimer  softtimer.o
+    0x0000220a   0x0000220a   0x00000002   PAD
+    0x0000220c   0x0000220c   0x00000010   Code   RO          170    .text.SysTick_Handler  softtimer.o
+    0x0000221c   0x0000221c   0x00000052   Code   RO          301    .text.SystemInit    system_s32k144.o
+    0x0000226e   0x0000226e   0x00000002   PAD
+    0x00002270   0x00002270   0x000000c4   Code   RO          147    .text.UART1_CLK_ENABLE  clock.o
+    0x00002334   0x00002334   0x0000003a   Code   RO          198    .text.UART1_GPIO_Config  lpuart.o
+    0x0000236e   0x0000236e   0x00000002   PAD
+    0x00002370   0x00002370   0x000000b8   Code   RO          206    .text.Uart_GetReceiveData  lpuart.o
+    0x00002428   0x00002428   0x0000000c   Code   RO          208    .text.Uart_GetReceiveState  lpuart.o
+    0x00002434   0x00002434   0x000000a4   Code   RO          196    .text.Uart_Init     lpuart.o
+    0x000024d8   0x000024d8   0x00000052   Code   RO          210    .text.Uart_RxMainFunction  lpuart.o
+    0x0000252a   0x0000252a   0x00000002   PAD
+    0x0000252c   0x0000252c   0x0000007a   Code   RO          200    .text.Uart_Transmit  lpuart.o
+    0x000025a6   0x000025a6   0x00000002   PAD
+    0x000025a8   0x000025a8   0x00000082   Code   RO          204    .text.Uart_TxMainFunction  lpuart.o
+    0x0000262a   0x0000262a   0x00000002   PAD
+    0x0000262c   0x0000262c   0x000000c6   Code   RO           38    .text.Watch_Display  app_function.o
+    0x000026f2   0x000026f2   0x00000002   PAD
+    0x000026f4   0x000026f4   0x000000a0   Code   RO          284    .text.init_data_bss  startup.o
+    0x00002794   0x00002794   0x0000000c   Code   RO            5    .text.main          main.o
+    0x000027a0   0x000027a0   0x0000001a   Code   RO          422    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x000027ba   0x000027ba   0x00000002   PAD
+    0x000027bc   0x000027bc   0x00000020   Data   RO          494    Region$$Table       anon$$obj.o
 
 
     Execution Region VECTOR_RAM (Exec base: 0x1fff8000, Load base: 0x00000230, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
@@ -1327,37 +1328,37 @@ Memory Map of the image
     0x1fff8000        -       0x00000400   Zero   RW            1    VECTOR_RAM.bss      anon$$obj.o
 
 
-    Execution Region RW_m_data (Exec base: 0x1fff8400, Load base: 0x000027b8, Size: 0x0000000c, Max: 0xffffffff, ABSOLUTE)
+    Execution Region RW_m_data (Exec base: 0x1fff8400, Load base: 0x000027dc, Size: 0x0000000c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x1fff8400   0x000027b8   0x0000000a   Data   RW           52    .data.LED_ERR       app_function.o
-    0x1fff840a   0x000027c2   0x00000001   Data   RW           68    .data.MAIN_MENU.PosNumber  app_function.o
+    0x1fff8400   0x000027dc   0x0000000a   Data   RW           52    .data.LED_ERR       app_function.o
+    0x1fff840a   0x000027e6   0x00000001   Data   RW           68    .data.MAIN_MENU.PosNumber  app_function.o
 
 
-    Execution Region RW_m_code (Exec base: 0x1fff840c, Load base: 0x000027c4, Size: 0x00000000, Max: 0x00007c00, ABSOLUTE)
-
-    **** No section assigned to this execution region ****
-
-
-    Execution Region RW_m_custom_section (Exec base: 0x20000000, Load base: 0x000027c4, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+    Execution Region RW_m_code (Exec base: 0x1fff840c, Load base: 0x000027e8, Size: 0x00000000, Max: 0x00007c00, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region RW_m_data_2 (Exec base: 0x20000000, Load base: 0x000027c4, Size: 0x000001cc, Max: 0x00006800, ABSOLUTE)
+    Execution Region RW_m_custom_section (Exec base: 0x20000000, Load base: 0x000027e8, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+
+
+    Execution Region RW_m_data_2 (Exec base: 0x20000000, Load base: 0x000027e8, Size: 0x000001cc, Max: 0x00006800, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000        -       0x00000001   Zero   RW           66    .bss.CheckTIMER_Alarm.Step  app_function.o
     0x20000001        -       0x00000001   Zero   RW           64    .bss.Check_Data_UART.CheckFrame  app_function.o
-    0x20000002   0x000027c4   0x00000002   PAD
+    0x20000002   0x000027e8   0x00000002   PAD
     0x20000004        -       0x00000004   Zero   RW          188    .bss.Count          lpit.o
     0x20000008        -       0x00000064   Zero   RW           55    .bss.Data_Read      app_function.o
     0x2000006c        -       0x00000001   Zero   RW           60    .bss.FlagHG         app_function.o
     0x2000006d        -       0x00000001   Zero   RW           63    .bss.FlagLedAlarm   app_function.o
     0x2000006e        -       0x00000001   Zero   RW           59    .bss.FlagStart      app_function.o
-    0x2000006f   0x000027c4   0x00000001   PAD
+    0x2000006f   0x000027e8   0x00000001   PAD
     0x20000070        -       0x00000004   Zero   RW           53    .bss.GetButton1     app_function.o
     0x20000074        -       0x00000004   Zero   RW           54    .bss.GetButton2     app_function.o
     0x20000078        -       0x00000001   Zero   RW          220    .bss.Index_Read     lpuart.o
@@ -1370,7 +1371,7 @@ Memory Map of the image
     0x20000088        -       0x00000004   Zero   RW           56    .bss.Length_Data_Read  app_function.o
     0x2000008c        -       0x00000001   Zero   RW           69    .bss.MAIN_MENU.StepChoice  app_function.o
     0x2000008d        -       0x00000001   Zero   RW          215    .bss.Receive_State  lpuart.o
-    0x2000008e   0x000027c4   0x00000002   PAD
+    0x2000008e   0x000027e8   0x00000002   PAD
     0x20000090        -       0x00000004   Zero   RW           75    .bss.SelectBabyMenu.LastButton1  app_function.o
     0x20000094        -       0x00000004   Zero   RW           76    .bss.SelectBabyMenu.LastButton2  app_function.o
     0x20000098        -       0x00000004   Zero   RW           74    .bss.SelectBabyMenu.Tickbutton  app_function.o
@@ -1382,26 +1383,26 @@ Memory Map of the image
     0x200000ac        -       0x00000064   Zero   RW          222    .bss.Software_Buffer_Read  lpuart.o
     0x20000110        -       0x00000064   Zero   RW          216    .bss.Software_Buffer_Send  lpuart.o
     0x20000174        -       0x00000001   Zero   RW          116    .bss.StateLED       gpio_isr.o
-    0x20000175   0x000027c4   0x00000003   PAD
+    0x20000175   0x000027e8   0x00000003   PAD
     0x20000178        -       0x0000003c   Zero   RW          172    .bss.TIMER          softtimer.o
     0x200001b4        -       0x00000004   Zero   RW          187    .bss.Tick_ms        lpit.o
     0x200001b8        -       0x00000004   Zero   RW          173    .bss.TimeCountMs    softtimer.o
     0x200001bc        -       0x00000001   Zero   RW           58    .bss.Time_Mode      app_function.o
     0x200001bd        -       0x00000001   Zero   RW          214    .bss.Transmit_State  lpuart.o
     0x200001be        -       0x00000001   Zero   RW          219    .bss.Uart_GetReceiveData.LengthCount  lpuart.o
-    0x200001bf   0x000027c4   0x00000001   PAD
+    0x200001bf   0x000027e8   0x00000001   PAD
     0x200001c0        -       0x00000004   Zero   RW          218    .bss.Uart_TxMainFunction.idex  lpuart.o
     0x200001c4        -       0x00000006   Zero   RW           57    .bss.Watch          app_function.o
 
 
-    Execution Region ARM_LIB_HEAP (Exec base: 0x200001cc, Load base: 0x000027c4, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
+    Execution Region ARM_LIB_HEAP (Exec base: 0x200001cc, Load base: 0x000027e8, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x200001cc        -       0x00000400   Zero   RW            2    ARM_LIB_HEAP.bss    anon$$obj.o
 
 
-    Execution Region ARM_LIB_STACK (Exec base: 0x20006c00, Load base: 0x000027c4, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
+    Execution Region ARM_LIB_STACK (Exec base: 0x20006c00, Load base: 0x000027e8, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1415,11 +1416,11 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      3636          0          0         11        159       6451   app_function.o
+      3666          0          0         11        159       6469   app_function.o
       1256          0          0          0          0       6141   clock.o
        800          0          0          0          0       2245   gpio.o
         98          0          0          0          1       1245   gpio_isr.o
-       552          0          0          0          0       1987   led_max7219.o
+       556          0          0          0          0       1987   led_max7219.o
        186          0          0          0          8       3750   lpit.o
        412          0          0          0          0       1994   lpspi.o
        760          0          0          0        217       5168   lpuart.o
@@ -1432,9 +1433,9 @@ Image component sizes
         82          0          0          0          0       2816   system_s32k144.o
 
     ----------------------------------------------------------------------
-      8872        106        612         12       3532      41198   Object Totals
+      8908        106        612         12       3532      41216   Object Totals
          0          0         32          0       3072          0   (incl. Generated)
-        58          0          0          1         11          0   (incl. Padding)
+        60          0          0          1         11          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1480,15 +1481,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      9092        122        612         12       3532      41338   Grand Totals
-      9092        122        612         12       3532      41338   ELF Image Totals
-      9092        122        612         12          0          0   ROM Totals
+      9128        122        612         12       3532      41356   Grand Totals
+      9128        122        612         12       3532      41356   ELF Image Totals
+      9128        122        612         12          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 9704 (   9.48kB)
+    Total RO  Size (Code + RO Data)                 9740 (   9.51kB)
     Total RW  Size (RW Data + ZI Data)              3544 (   3.46kB)
-    Total ROM Size (Code + RO Data + RW Data)       9716 (   9.49kB)
+    Total ROM Size (Code + RO Data + RW Data)       9752 (   9.52kB)
 
 ==============================================================================
 

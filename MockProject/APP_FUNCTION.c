@@ -226,29 +226,28 @@ static void Decode_Data(void)
   {
     if( CheckRuleNumber(Data_Read)==TRUE ) /* Kiem tra dung la cac ki tu so */
     {
-      if( CheckRuleTime(&NewTime)==TRUE ) /* Kiem tra dung dieu kien Time */
+      if ( (Data_Read[1]=='H') && (Data_Read[2]=='G') )  /* Hen gio */
       {
-        if ( (Data_Read[1]=='H') && (Data_Read[2]=='G') )  /* Hen gio */
+        if( (Time_Mode==AM)||(Time_Mode==PM) )
         {
-          if( (Time_Mode==AM)||(Time_Mode==PM) )
+          if( CheckRuleTime(&NewTime)==TRUE )  /* Kiem tra dung dieu kien Time */
           {
             FlagHG=HG;
             SetTimer = NewTime;
           }
         }
-        else if ( (Data_Read[1]=='A') && (Data_Read[2]=='M') ) /* AM */
-        {    
-          Time_Mode=AM;
-          Watch = NewTime;
-        }
-        else if ( (Data_Read[1]=='P') && (Data_Read[2]=='M') ) /* PM */
-        {
-          Time_Mode=PM;
-          Watch = NewTime;
-        }
-        else {}
-
-      }/* CheckRuleTime */
+      }
+      else if ( (Data_Read[1]=='A') && (Data_Read[2]=='M') ) /* AM */
+      {    
+        Time_Mode=AM;
+        if( CheckRuleTime(&NewTime)==TRUE ) Watch = NewTime; /* Kiem tra dung dieu kien Time */
+      }
+      else if ( (Data_Read[1]=='P') && (Data_Read[2]=='M') ) /* PM */
+      {
+        Time_Mode=PM;
+        if( CheckRuleTime(&NewTime)==TRUE ) Watch = NewTime; /* Kiem tra dung dieu kien Time */
+      }
+      else {}
 
     }/* CheckRuleNumber */
 
